@@ -75,7 +75,7 @@ const Spotlight = () => {
       ref={sectionRef}
       className="relative w-full h-screen overflow-hidden bg-black"
     >
-      <Header onOpenDrawer={() => setIsDrawerOpen(true)} />
+      {/* <Header onOpenDrawer={() => setIsDrawerOpen(true)} /> */}
 
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
@@ -138,10 +138,6 @@ const Spotlight = () => {
           opacity: 1;
         }
       `}</style>
-      <SideDrawer
-        isOpen={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-      />
     </section>
   );
 };

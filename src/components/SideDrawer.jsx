@@ -9,6 +9,7 @@ import {
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import gsap from "gsap";
 import { LuArrowRight } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const SideDrawer = ({ isOpen, onClose }) => {
   const drawerRef = useRef(null);
@@ -86,9 +87,11 @@ const SideDrawer = ({ isOpen, onClose }) => {
           </div>
 
           <div className="flex items-center justify-end">
-            <button className="flex items-center gap-3 bg-white/10 text-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all duration-300 font-medium mb-16">
-              View Gallery <LuArrowRight />
-            </button>
+            <Link to="/gallery">
+              <button className="flex items-center gap-3 bg-white/10 text-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all duration-300 font-medium mb-16">
+                View Gallery <LuArrowRight />
+              </button>
+            </Link>
           </div>
 
           {/* Contact Details */}
