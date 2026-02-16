@@ -84,7 +84,7 @@ const Counter = () => {
               className="stat-card space-y-2  py-10 px-6 rounded-3xl"
             >
               <div
-                className="count-up text-4xl md:text-5xl font-bold text-black tracking-tight"
+                className="count-up text-4xl md:text-5xl font-bold text-[#b22a2a] tracking-tight"
                 data-target={item.value}
               >
                 0

@@ -66,14 +66,14 @@ const ServicesSection = () => {
   const brandColor = "#b22a2a";
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-white">
+    <section className="pt-24 px-6 md:px-12 bg-white">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header with Sharp Accent */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-5xl md:text-5xl font-bold text-gray-900 leading-[0.9]">
               Work with <br />
-              <span style={{ color: brandColor }}>ANAM TRADING</span>
+              <span style={{ color: brandColor }}>ANAM</span> Trading
             </h2>
           </div>
           <div className="max-w-md">

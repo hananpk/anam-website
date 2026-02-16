@@ -3,7 +3,7 @@ export const productData = [
     name: "Flooring",
     items: [
       {
-        name: "SPC Flooring",
+        name: "Flooring",
         description: "Stone Plastic Composite flooring - a rigid, waterproof flooring solution with enhanced durability",
         features: [
           "100% waterproof",
@@ -24,7 +24,7 @@ export const productData = [
         wearLayer: "0.3mm - 0.7mm"
       },
       {
-        name: "Acrylic",
+        name: "wall-paneling-cladding",
         description: "High-gloss acrylic flooring with superior shine and modern aesthetic",
         features: [
           "High-gloss finish",
@@ -44,7 +44,7 @@ export const productData = [
         finishOptions: ["High gloss", "Semi-gloss", "Matte"]
       },
       {
-        name: "Laminated Wooden Flooring",
+        name: "Doors",
         description: "Multi-layer synthetic flooring that replicates the look of real hardwood",
         features: [
           "Realistic wood grain patterns",
@@ -64,7 +64,7 @@ export const productData = [
         thickness: "7mm - 12mm"
       },
       {
-        name: "Carpet Tile",
+        name: "Windows",
         description: "Modular carpet squares offering flexibility in design and easy replacement",
         features: [
           "Modular design",
@@ -104,7 +104,7 @@ export const productData = [
         thickness: "2mm - 8mm"
       },
       {
-        name: "Grass Flooring",
+        name: "Partitions",
         description: "Artificial grass flooring for indoor and outdoor applications",
         features: [
           "UV stabilized",
@@ -124,7 +124,7 @@ export const productData = [
         density: "12,000 - 18,000 stitches per sqm"
       },
       {
-        name: "Sports & Gym Floorings",
+        name: "Ceiling",
         description: "Specialized flooring designed for athletic and fitness facilities",
         features: [
           "Shock absorption",
@@ -144,7 +144,7 @@ export const productData = [
         thickness: "6mm - 15mm"
       },
       {
-        name: "WPC Decking",
+        name: "Carpentry",
         description: "Wood Plastic Composite decking - a sustainable outdoor flooring solution",
         features: [
           "Weather resistant",
@@ -164,7 +164,7 @@ export const productData = [
         finishes: ["Brushed", "Embossed", "Grooved"]
       },
       {
-        name: "LVT Flooring",
+        name: "Profile & Accessories",
         description: "Luxury Vinyl Tile - premium vinyl flooring with realistic textures",
         features: [
           "Photographic print layer",
@@ -184,7 +184,7 @@ export const productData = [
         thickness: "2mm - 5mm"
       },
       {
-        name: "Solid And Semi Solid Engineering Wooden Floor",
+        name: "Kitchen & Wardrobe",
         description: "Real wood flooring with enhanced stability and performance",
         features: [
           "Real wood top layer",
@@ -206,7 +206,7 @@ export const productData = [
     ]
   },
   {
-    name: "Curtains And Roller Blinds",
+    name: "Lock and Handles",
     items: [
       {
         name: "Blackout Blinds in Qatar",
@@ -431,7 +431,7 @@ export const productData = [
     ]
   },
   {
-    name: "Wall Panels",
+    name: "Wood",
     items: [
       {
         name: "WPC Wall Panel",
@@ -520,7 +520,7 @@ export const productData = [
     ]
   },
   {
-    name: "Doors",
+    name: "Aluminum",
     items: [
       {
         name: "WPC Doors",
@@ -656,10 +656,10 @@ export const productData = [
     ]
   },
   {
-    name: "Additional Services",
+    name: "Kitchen Wardrobe",
     items: [
       {
-        name: "Wallpaper",
+        name: "Kitchen Wardrobe",
         description: "Decorative wall coverings in various materials, patterns, and textures",
         features: [
           "Wide design variety",
@@ -679,7 +679,7 @@ export const productData = [
         patterns: ["Geometric", "Floral", "Textured", "Mural", "Solid colors"]
       },
       {
-        name: "Artificial Plants and Pots",
+        name: "Lock and Handles",
         description: "Realistic faux plants and decorative planters for maintenance-free greenery",
         features: [
           "No watering needed",
@@ -699,7 +699,7 @@ export const productData = [
         potMaterials: ["Ceramic", "Fiberglass", "Resin", "Metal", "Concrete"]
       },
       {
-        name: "Steel",
+        name: "Wood",
         description: "Structural and decorative steel fabrication services",
         features: [
           "High strength",
@@ -740,7 +740,7 @@ export const productData = [
         products: ["Railings", "Balustrades", "Countertops", "Cladding", "Fixtures"]
       },
       {
-        name: "uPVC",
+        name: "UPVC",
         description: "Unplasticized Polyvinyl Chloride solutions for windows, doors, and profiles",
         features: [
           "Weather resistant",
@@ -760,7 +760,7 @@ export const productData = [
         colors: ["White", "Wood grain", "Colored finishes"]
       },
       {
-        name: "Glass",
+        name: "WPC",
         description: "Comprehensive glass solutions for architectural and decorative applications",
         features: [
           "Various thicknesses",
@@ -781,7 +781,7 @@ export const productData = [
         treatments: ["Frosted", "Patterned", "Toughened", "Laminated"]
       },
       {
-        name: "Ceiling",
+        name: "Curtain and Blinds",
         description: "Suspended and false ceiling systems for commercial and residential spaces",
         features: [
           "Conceals services",
@@ -822,7 +822,7 @@ export const productData = [
         hardware: ["Soft-close hinges", "Drawer channels", "Pull-out systems", "Handles"]
       },
       {
-        name: "WPC",
+        name: "Shades and Fabric",
         description: "Wood Plastic Composite solutions for various applications",
         features: [
           "Eco-friendly",

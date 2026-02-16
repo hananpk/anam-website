@@ -50,10 +50,10 @@ const TailoredServices = () => {
     <section className="container mx-auto py-24 px-6 bg-white font-sans">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header - Matching image 06 style */}
-        <div className="flex items-baseline gap-6 mb-16 border-b border-gray-100 pb-8">
+        <div className="flex items-baseline gap-6 border-b border-gray-100 pb-8">
           <div>
             <h2 className="text-4xl font-bold text-gray-800 tracking-tight">
-              Best Flooring
+              Best Products
             </h2>
           </div>
         </div>
