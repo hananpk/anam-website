@@ -36,7 +36,7 @@ const ProductDetail = () => {
         <section
           className="relative h-[40vh] flex items-center px-10 bg-cover bg-center bg-gray-900"
           style={{
-            backgroundImage: `url(${product.heroImage || "https://via.placeholder.com/1920x600"})`,
+            backgroundImage: `url(${product.heroImage || "https://plus.unsplash.com/premium_photo-1683129627035-e5a145c3d705?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"})`,
           }}
         >
           <div className="absolute inset-0 bg-black/60" />
@@ -91,7 +91,7 @@ const ProductDetail = () => {
 
             <div className="relative">
               <img
-                src={product.mainImage || "https://via.placeholder.com/800x600"}
+                src={product.mainImage || "https://plus.unsplash.com/premium_photo-1683129627035-e5a145c3d705?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
                 alt={product.name}
                 className="shadow-2xl w-full h-[500px] object-cover border-8 border-white"
               />
