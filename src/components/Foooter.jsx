@@ -29,14 +29,14 @@ const Footer = () => {
     { icon: <FaTwitter size={20} />, name: "Twitter", href: "#" },
   ];
   return (
-    <footer className="relative bg-[#1a1a1a] text-white pt-24 pb-10 overflow-hidden h-[600px]">
+    <footer className="relative bg-[#1a1a1a] text-white pt-24 overflow-hidden pb-10">
       {/* Decorative Background Image & Text Overlay */}
       <div className="absolute inset-0 z-0 opacity-20">
-        <img
+        {/* <img
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80"
           alt="Background Interior"
           className="w-full h-full object-cover grayscale"
-        />
+        /> */}
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
@@ -126,9 +126,9 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <h2 className=" text-center -mt-8 h-auto text-[10vw] font-black text-white/[0.12] uppercase pointer-events-none select-none">
+      {/* <h2 className=" text-center -mt-8 h-auto text-[10vw] font-black text-white/[0.12] uppercase pointer-events-none select-none">
         anam
-      </h2>
+      </h2> */}
     </footer>
   );
 };

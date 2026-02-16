@@ -12,7 +12,7 @@ const Counter = () => {
     { value: "1000+", label: "Customers served" },
     { value: "98%", label: "Customers recommend us" },
     { value: "4.8/5", label: "Customer Satisfaction Score" },
-    { value: "50 Cr+", label: "Total Tax Savings" },
+    { value: "50+", label: "Cities" },
   ];
 
   const getNumberAndSymbol = (value) => {
@@ -30,7 +30,7 @@ const Counter = () => {
       cards.forEach((card) => {
         const numberElement = card.querySelector(".count-up");
         const { number, symbol } = getNumberAndSymbol(
-          numberElement.getAttribute("data-target")
+          numberElement.getAttribute("data-target"),
         );
 
         // Target object for GSAP to animate
@@ -52,7 +52,6 @@ const Counter = () => {
           ease: "power3.out",
         });
 
-        // The number counting animation
         tl.to(
           countObj,
           {
@@ -60,7 +59,6 @@ const Counter = () => {
             duration: 2.5,
             ease: "power2.out",
             onUpdate: () => {
-              // Check if number is decimal (like 4.8) or integer
               const isDecimal = number % 1 !== 0;
               numberElement.innerText =
                 (isDecimal
@@ -68,8 +66,8 @@ const Counter = () => {
                   : Math.floor(countObj.val)) + symbol;
             },
           },
-          "-=0.6"
-        ); // Start counting slightly before card finishes rising
+          "-=0.6",
+        );
       });
     }, sectionRef);
 
@@ -86,13 +84,13 @@ const Counter = () => {
               className="stat-card space-y-2  py-10 px-6 rounded-3xl"
             >
               <div
-                className="count-up text-4xl md:text-5xl font-bold text-white tracking-tight"
+                className="count-up text-4xl md:text-5xl font-bold text-black tracking-tight"
                 data-target={item.value}
               >
                 0
               </div>
 
-              <div className="text-sm md:text-sm font-medium text-white uppercase">
+              <div className="text-sm md:text-sm font-medium text-black uppercase">
                 {item.label}
               </div>
             </div>

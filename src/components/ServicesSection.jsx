@@ -1,33 +1,31 @@
-import React, { useLayoutEffect, useRef, useEffect, useState } from "react";
-import gsap from "gsap";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import React, { useRef } from "react";
 import { IMAGES } from "../utils/assets";
 import Counter from "./Counter";
 
 const servicesData = [
   {
-    id: 1,
+    id: "01",
     title: "Interior Design & Planning",
     description:
       "Make your space shine! Our team creates inviting, beautiful interiors that reflect your style.",
     icon: IMAGES.design_icon,
   },
   {
-    id: 2,
+    id: "02",
     title: "Architectural Design",
     description:
       "Dream it, we'll design it! From big picture layouts to the tiniest details.",
     icon: IMAGES.architec_icon,
   },
   {
-    id: 3,
+    id: "03",
     title: "Consulting Services",
     description:
       "Consider us your design whisperers! We provide expert advice to help your project sparkle.",
     icon: IMAGES.consulting_icon,
   },
   {
-    id: 4,
+    id: "04",
     title: "Project Management",
     description:
       "We handle the hustle! From start to finish, we keep your project on track and stress-free.",
@@ -35,149 +33,70 @@ const servicesData = [
   },
 ];
 
-const ServiceCard = ({ title, description, icon }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const mouseXSpring = useSpring(x);
-  const mouseYSpring = useSpring(y);
-
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["12deg", "-12deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const xPct = (e.clientX - rect.left) / rect.width - 0.5;
-    const yPct = (e.clientY - rect.top) / rect.height - 0.5;
-
-    x.set(xPct);
-    y.set(yPct);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
+const ServiceCard = ({ id, title, description, icon }) => {
   return (
-    <div className="h-full" style={{ perspective: "1000px" }}>
-      <motion.div
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          rotateX,
-          rotateY,
-          transformStyle: "preserve-3d",
-        }}
-        className="service-card h-full flex flex-col p-8 bg-black/10 backdrop-blur-md 
-                   rounded-3xl border border-white/10 shadow-lg group
-                   transition-colors duration-500 hover:bg-white"
-      >
-        <div className="mb-6 w-16" style={{ transform: "translateZ(50px)" }}>
-          <img src={icon} alt="" className="w-full" />
+    <div className="flex flex-col h-full bg-white border border-gray-200 group">
+      {/* Top Header Bar - Matching image style */}
+      <div className="flex items-center justify-between px-6 py-4 bg-[#b22a2a] text-white">
+        <div className="flex items-center gap-3">
+          <div className="p-2 bg-white/10">
+            <img src={icon} alt="" className="w-6 h-6 invert brightness-0" />
+          </div>
+          <span className="text-sm font-bold tracking-widest">{id}</span>
         </div>
+      </div>
 
-        <div style={{ transform: "translateZ(30px)" }}>
-          <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#b22a2a]">
-            {title}
-          </h3>
-          <p className="text-gray-200 group-hover:text-black">{description}</p>
+      {/* Content Area */}
+      <div className="flex flex-col flex-grow p-8">
+        <h3 className="text-xl font-bold tracking-tight text-gray-900 mb-4 group-hover:text-[#b22a2a] transition-colors">
+          {title}
+        </h3>
+        <p className="text-gray-600 leading-relaxed text-sm">{description}</p>
+
+        {/* Bottom border indicator */}
+        <div className="mt-auto pt-6">
+          <div className="w-12 h-1 bg-[#b22a2a]/20 group-hover:w-full group-hover:bg-[#b22a2a] transition-all duration-500"></div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
 const ServicesSection = () => {
-  const sectionRef = useRef(null);
-  const headerRef = useRef(null);
-  const subHeaderRef = useRef(null);
-
-  const bgImages = [IMAGES.bedroom, IMAGES.dark_bg_2, IMAGES.table];
-
-  const [bgIndex, setBgIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setBgIndex((prev) => (prev + 1) % bgImages.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap
-        .timeline({ defaults: { ease: "power3.out" } })
-        .from(headerRef.current, { y: 50, opacity: 0, duration: 0.8 })
-        .from(
-          subHeaderRef.current,
-          { y: 30, opacity: 0, duration: 0.8 },
-          "-=0.4"
-        )
-        .from(
-          ".service-card",
-          { y: 60, opacity: 0, stagger: 0.15, duration: 0.8 },
-          "-=0.4"
-        );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const brandColor = "#b22a2a";
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-20 px-4 md:px-8 overflow-hidden"
-    >
-      <div className="absolute inset-0">
-        {bgImages.map((img, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: bgIndex === index ? 1 : 0,
-              scale: bgIndex === index ? 1.05 : 1,
-            }}
-            transition={{ duration: 2, ease: "easeInOut" }}
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${img})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-        ))}
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/70" />
-      </div>
-
-      {/* --------- CONTENT --------- */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <h2
-          ref={headerRef}
-          className="text-4xl md:text-5xl font-bold text-white mb-6"
-        >
-          Experience the art of
-          <span className="block text-[#b22a2a]">interior design</span>
-        </h2>
-
-        <div ref={subHeaderRef} className="max-w-3xl mb-16">
-          <p className="text-lg text-gray-100">
-            We specialize in transforming visions into reality. Explore our
-            portfolio of innovative architectural and interior design projects.
-          </p>
+    <section className="py-24 px-6 md:px-12 bg-white">
+      <div className="max-w-[1440px] mx-auto">
+        {/* Section Header with Sharp Accent */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-5xl md:text-5xl font-bold text-gray-900 leading-[0.9]">
+              Work with <br />
+              <span style={{ color: brandColor }}>ANAM TRADING</span>
+            </h2>
+          </div>
+          <div className="max-w-md">
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed border-l-4 border-[#b22a2a] pl-6 italic">
+              "We specialize in transforming visions into reality. Explore our
+              portfolio of innovative architectural and interior design
+              projects."
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Square Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 border border-gray-200">
           {servicesData.map((service) => (
             <ServiceCard key={service.id} {...service} />
           ))}
         </div>
-      </div>
 
-      <Counter />
+        {/* Integrated Stats Section */}
+        <div className="mt-20">
+          <Counter />
+        </div>
+      </div>
     </section>
   );
 };

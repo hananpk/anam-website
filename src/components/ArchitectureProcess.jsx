@@ -46,7 +46,7 @@ const ArchitectureProcess = () => {
         <div className="mb-20 gap-8 flex flex-col lg:flex-row items-center">
           <div>
             <div className="max-w-2xl">
-              <span className="inline-block px-4 py-1 rounded-full border border-gray-300 text-[10px] uppercase tracking-widest font-bold mb-6">
+              <span className="inline-block px-4 py-1 border border-gray-300 text-[10px] uppercase tracking-widest font-bold mb-6">
                 • How We Work
               </span>
               <h2 className="text-5xl font-bold text-[#1a1a1a]">
@@ -77,9 +77,9 @@ const ArchitectureProcess = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white overflow-hidden rounded-3xl py-4 px-4 shadow-sm hover:shadow-xl transition-shadow duration-500 group border border-gray-100"
+              className="bg-white overflow-hidden py-4 px-4 shadow-sm hover:shadow-xl transition-shadow duration-500 group border border-gray-100"
             >
-              <div className="w-full h-[150px] rounded-2xl overflow-hidden mb-8">
+              <div className="w-full h-[150px] overflow-hidden mb-8">
                 <img
                   src={step.image}
                   alt={step.title}

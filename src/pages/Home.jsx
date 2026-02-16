@@ -6,6 +6,7 @@ import HorizontalGallery from "../components/HorizontalGallery";
 import Layout from "../components/Layout";
 import LogoSlider from "../components/LogoSlider";
 import MasonryGallery from "../components/MasanoryGallery";
+import ProductShowcaseSection from "../components/ProductShowCase";
 import ServicesSection from "../components/ServicesSection";
 import Spotlight from "../components/Spotlight";
 import TailoredServices from "../components/TailoredServices";
@@ -16,14 +17,15 @@ const Home = () => {
     <>
       <Layout>
         <Spotlight />
-        <HeroSection />
+        {/* <HeroSection /> */}
         <ServicesSection />
-        <TailoredServices />
-        <FinishingSolutions />
-        <ArchitectureProcess />
-        <Testimonial />
         <LogoSlider />
-        <BlogSection />
+        <TailoredServices />
+        {/* <FinishingSolutions /> */}
+        <ProductShowcaseSection />
+        <ArchitectureProcess />
+        {/* <Testimonial /> */}
+        {/* <BlogSection /> */}
         {/* <HorizontalGallery /> */}
         {/* <MasonryGallery /> */}
       </Layout>

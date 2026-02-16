@@ -55,7 +55,7 @@ const ProductCard = ({ product }) => {
         y.set(0);
       }}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="relative w-full h-[400px] rounded-[2rem] overflow-hidden shadow-2xl bg-black"
+      className="relative w-full h-[400px] overflow-hidden shadow-2xl bg-black"
     >
       <img
         src={product.image}
@@ -99,13 +99,13 @@ const FinishingSolutions = () => {
           <div className="flex gap-4 pt-4">
             <button
               id="p-prev"
-              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#b22a2a] transition-all z-30"
+              className="w-14 h-14 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#b22a2a] transition-all z-30"
             >
               <LuChevronLeft size={24} />
             </button>
             <button
               id="p-next"
-              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#b22a2a] transition-all z-30"
+              className="w-14 h-14 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#b22a2a] transition-all z-30"
             >
               <LuChevronRight size={24} />
             </button>
