@@ -24,6 +24,9 @@ import bedroom from '../assets/images/bedroom.jpg';
 import table from '../assets/images/table.jpg';
 import bg_3 from '../assets/images/bg3.jpg';
 import bg_4 from '../assets/images/bg4.jpg';
+import interior from '../assets/images/interior.png';
+import interior1 from '../assets/images/interior1.png';
+
 
 export const IMAGES = {
     logo,
@@ -52,4 +55,6 @@ export const IMAGES = {
     bedroom,
     bg_3,
     bg_4,
+    interior,
+    interior1,
 }

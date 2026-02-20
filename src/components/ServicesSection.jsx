@@ -67,7 +67,7 @@ const ServicesSection = () => {
 
   return (
     <section className="pt-24 px-6 md:px-12 bg-white">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Section Header with Sharp Accent */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">

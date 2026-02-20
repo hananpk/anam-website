@@ -13,14 +13,14 @@ import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 const slides = [
   {
-    image: IMAGES.spc_flooring,
+    image: IMAGES.interior,
     title: ["Premium SPD", "Flooring Solutions"],
     subtitle: "Durability Meets Style",
     desc: "Upgrade your space with our water-resistant, high-durability SPC flooring available in various modern textures and finishes.",
     cta: "Explore Flooring",
   },
   {
-    image: IMAGES.wallpaper,
+    image: IMAGES.interior1,
     title: ["Elegant", "Wall Coverings"],
     subtitle: "Transform Your Walls",
     desc: "Choose from our exclusive collection of wallpapers to add character, warmth, and sophistication to any room.",
