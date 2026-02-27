@@ -47,7 +47,6 @@ const ProductShowcaseSection = () => {
               item.reverse ? "lg:flex-row-reverse" : ""
             }`}
           >
-            {/* Image Block */}
             <div className={`relative ${item.reverse ? "lg:order-2" : ""}`}>
               <img
                 src={item.image}
@@ -55,10 +54,8 @@ const ProductShowcaseSection = () => {
                 className="w-full h-[420px] object-cover"
               />
 
-              {/* Floating Info Card */}
             </div>
 
-            {/* Applications Card */}
             <div
               className={`bg-gray-50 p-8 ${item.reverse ? "lg:order-1" : ""}`}
             >
@@ -67,7 +64,7 @@ const ProductShowcaseSection = () => {
                   item.reverse ? "right-8" : "left-8"
                 } text-white max-w-sm mb-8`}
               >
-                <h3 className="text-2xl font-semibold text-[#333]">
+                <h3 className="text-3xl text-[#b22a2a] font-bold">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[#333] leading-relaxed">{item.desc}</p>

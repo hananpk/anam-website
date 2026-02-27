@@ -42,7 +42,7 @@ const ArchitectureProcess = () => {
           "url(https://demo2.themelexus.com/antra/wp-content/uploads/2025/06/h1-bg02.png)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container mx-auto px-6">
         <div className="mb-20 gap-8 flex flex-col lg:flex-row items-center">
           <div>
             <div className="max-w-2xl">

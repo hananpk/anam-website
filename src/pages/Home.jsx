@@ -20,10 +20,10 @@ const Home = () => {
         {/* <HeroSection /> */}
         <ServicesSection />
         <LogoSlider />
-        {/* <FinishingSolutions /> */}
-        <ProductShowcaseSection />
         <ArchitectureProcess />
         <TailoredServices />
+        {/* <FinishingSolutions /> */}
+        {/* <ProductShowcaseSection /> */}
         {/* <Testimonial /> */}
         {/* <BlogSection /> */}
         {/* <HorizontalGallery /> */}

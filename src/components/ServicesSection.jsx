@@ -1,104 +1,61 @@
-import React, { useRef } from "react";
-import { IMAGES } from "../utils/assets";
-import Counter from "./Counter";
+import React from "react";
+import { ArrowRight } from "lucide-react";
 
-const servicesData = [
-  {
-    id: "01",
-    title: "Interior Design & Planning",
-    description:
-      "Make your space shine! Our team creates inviting, beautiful interiors that reflect your style.",
-    icon: IMAGES.design_icon,
-  },
-  {
-    id: "02",
-    title: "Architectural Design",
-    description:
-      "Dream it, we'll design it! From big picture layouts to the tiniest details.",
-    icon: IMAGES.architec_icon,
-  },
-  {
-    id: "03",
-    title: "Consulting Services",
-    description:
-      "Consider us your design whisperers! We provide expert advice to help your project sparkle.",
-    icon: IMAGES.consulting_icon,
-  },
-  {
-    id: "04",
-    title: "Project Management",
-    description:
-      "We handle the hustle! From start to finish, we keep your project on track and stress-free.",
-    icon: IMAGES.project_icon,
-  },
-];
-
-const ServiceCard = ({ id, title, description, icon }) => {
+const ServiceSection = () => {
   return (
-    <div className="flex flex-col h-full bg-white border border-gray-200 group">
-      {/* Top Header Bar - Matching image style */}
-      <div className="flex items-center justify-between px-6 py-4 bg-[#b22a2a] text-white">
-        <div className="flex items-center gap-3">
-          <div className="p-2 bg-white/10">
-            <img src={icon} alt="" className="w-6 h-6 invert brightness-0" />
+    <div className="bg-[#fff] text-black py-20">
+      <div className="container px-6 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        <div className="">
+          <h2 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
+            From Concept Sketches to Finished Spaces, We Shape Your World.
+          </h2>
+          <div className="mt-12 relative w-full max-w-sm aspect-square md:aspect-video lg:aspect-square bg-[#b22a2a] overflow-hidden group shadow-2xl">
+            <div className="absolute inset-0 opacity-20 grayscale group-hover:scale-110 transition-transform duration-700">
+              <img 
+                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1558&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                alt="Industrial Background" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            <div className="relative h-full flex flex-col justify-center items-center text-center p-8">
+              <span className="text-7xl md:text-8xl text-[#fff] font-bold tracking-tighter">10+</span>
+              <p className="text-lg md:text-xl font-medium tracking-widest uppercase mt-2 text-blue-100">
+                Years Of Experience
+              </p>
+            </div>
           </div>
-          <span className="text-sm font-bold tracking-widest">{id}</span>
         </div>
-      </div>
 
-      {/* Content Area */}
-      <div className="flex flex-col flex-grow p-8">
-        <h3 className="text-xl font-bold tracking-tight text-gray-900 mb-4 group-hover:text-[#b22a2a] transition-colors">
-          {title}
-        </h3>
-        <p className="text-gray-600 leading-relaxed text-sm">{description}</p>
+        <div className="flex flex-col justify-between h-auto py-4">
+          <div className="grid grid-cols-2 gap-12 mb-16">
+            <div className="space-y-2">
+              <span className="text-5xl md:text-6xl font-bold tracking-tighter text-[#b22a2a] italic">3+</span>
+              <p className="text-zinc-500 text-sm font-medium uppercase tracking-widest">Warehouses</p>
+            </div>
 
-        {/* Bottom border indicator */}
-        <div className="mt-auto pt-6">
-          <div className="w-12 h-1 bg-[#b22a2a]/20 group-hover:w-full group-hover:bg-[#b22a2a] transition-all duration-500"></div>
+            <div className="space-y-2">
+              <span className="text-5xl md:text-6xl font-bold text-[#b22a2a] tracking-tighter italic">40+</span>
+              <p className="text-zinc-500 text-sm font-medium uppercase tracking-widest">Employees working</p>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <p className="text-zinc-400 text-lg leading-relaxed max-w-lg">
+              Welcome to <span className="text-[#b22a2a] font-semibold">ANAM Trading Company</span>, your trusted partner for over 30 years in elevating living and working environments. Specializing in premium interior planning, architectural design, and high-end finishes, we ensure every space is crafted for both beauty and lasting durability.
+            </p>
+            
+            <button className="flex items-center gap-3 bg-[#b22a2a] hover:bg-[#333] text-white px-8 py-4 font-bold transition-all group">
+              Read More
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </div>
+
       </div>
     </div>
   );
 };
 
-const ServicesSection = () => {
-  const brandColor = "#b22a2a";
-
-  return (
-    <section className="pt-24 px-6 md:px-12 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Section Header with Sharp Accent */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-          <div className="max-w-2xl">
-            <h2 className="text-5xl md:text-5xl font-bold text-gray-900 leading-[0.9]">
-              Work with <br />
-              <span style={{ color: brandColor }}>ANAM</span> Trading
-            </h2>
-          </div>
-          <div className="max-w-md">
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed border-l-4 border-[#b22a2a] pl-6 italic">
-              "We specialize in transforming visions into reality. Explore our
-              portfolio of innovative architectural and interior design
-              projects."
-            </p>
-          </div>
-        </div>
-
-        {/* Square Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 border border-gray-200">
-          {servicesData.map((service) => (
-            <ServiceCard key={service.id} {...service} />
-          ))}
-        </div>
-
-        {/* Integrated Stats Section */}
-        <div className="mt-20">
-          <Counter />
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default ServicesSection;
+export default ServiceSection;

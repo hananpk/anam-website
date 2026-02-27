@@ -87,7 +87,7 @@ const Spotlight = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[75vh] overflow-hidden bg-black"
+      className="relative w-full h-[90vh] overflow-hidden bg-black"
     >
       <Swiper
         modules={[Autoplay, EffectFade, Pagination, Navigation]}

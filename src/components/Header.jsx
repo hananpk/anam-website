@@ -11,13 +11,10 @@ import { IMAGES } from "../utils/assets";
 import { Link, useNavigate } from "react-router-dom";
 
 const megaMenuItems = [
-  // Col 1: Flooring
   ["Flooring", "Wall Paneling & Cladding", "Doors", "Windows", "Partitions", "Ceiling", "Carpentry"],
   
-  // Col 2: Openings & Walls
-  ["Profile & Accessories", "Kitchen & Wardrobe", "Lock and Handles", "Wood"],
+  ["Profile & Accessories", "Kitchen & Wardrobe", "Lock and Handles", "Wood", "Solid Surface"],
   
-  // Col 3: Structures & Materials
   ["Aluminum", "Stainless Steel",, "UPVC", "WPC", "Curtain and Blinds", "Shades and Fabric"],
   
 ];
@@ -29,11 +26,7 @@ const Header = () => {
   const brandColor = "#63243B";
   const navigate = useNavigate();
 
-  // const allItems = useMemo(() => {
-  //   return serviceCategories.flatMap((cat) =>
-  //     cat.items.map((item) => ({ name: item, category: cat.name })),
-  //   );
-  // }, []);
+  
 
   const filteredResults = useMemo(() => {
     if (!searchQuery) return [];
@@ -47,17 +40,17 @@ const Header = () => {
   const handleClickProducts = (item) => {
     const route = item
     .toLowerCase()
-    .replace(/&/g, "")         // Removes &
-    .replace(/\s+/g, "-")      // Replaces one or more spaces with a single -
-    .replace(/-+/g, "-")       // Fixes double hyphens like --
+    .replace(/&/g, "")         
+    .replace(/\s+/g, "-")      
+    .replace(/-+/g, "-")       
     .replace(/^-+|-+$/g, "");
     navigate(`/products/${route}`);
     console.log("helo", route);
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-[#b22a2a]">
-      <div className="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between relative">
+    <header className="static top-0 w-full z-50 bg-[#b22a2a] ">
+      <div className="max-w-[1280px] mx-auto px-6 h-[90px] flex items-center justify-between relative">
         {/* Logo Section */}
         <div
           className={`flex items-center gap-3 shrink-0 ${isSearchOpen ? "hidden md:flex" : "flex"}`}
@@ -148,7 +141,7 @@ const Header = () => {
             onMouseLeave={() => setIsMegaMenuOpen(false)}
           >
             <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-widest text-white hover:text-black transition-colors h-full">
-              SERVICES{" "}
+              PRODUCTS{" "}
               <ChevronDown
                 size={14}
                 className={isMegaMenuOpen ? "rotate-180" : ""}
