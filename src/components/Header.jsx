@@ -30,9 +30,9 @@ const Header = () => {
 
   const filteredResults = useMemo(() => {
     if (!searchQuery) return [];
-    return megaMenuItems
+    return megaMenuItems.flat()
       .filter((item) =>
-        item.toLowerCase().includes(searchQuery.toLowerCase()),
+          item?.includes(searchQuery.toLowerCase()),
       )
       .slice(0, 8);
   }, [searchQuery]);
@@ -104,10 +104,7 @@ const Header = () => {
                       >
                         <div>
                           <p className="text-sm font-bold text-gray-900">
-                            {result.name}
-                          </p>
-                          <p className="text-[10px] text-gray-500 uppercase tracking-tighter">
-                            {result.category}
+                            {result}
                           </p>
                         </div>
                         <ArrowRight

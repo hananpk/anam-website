@@ -21,7 +21,7 @@ const ServiceSection = () => {
             
             <div className="relative h-full flex flex-col justify-center items-center text-center p-8">
               <span className="text-7xl md:text-8xl text-[#fff] font-bold tracking-tighter">10+</span>
-              <p className="text-lg md:text-xl font-medium tracking-widest uppercase mt-2 text-blue-100">
+              <p className="text-lg md:text-xl font-medium tracking-widest uppercase mt-2 text-white">
                 Years Of Experience
               </p>
             </div>
