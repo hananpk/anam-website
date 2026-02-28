@@ -8,7 +8,7 @@ import ProjectsPage from "./pages/Projects";
 import ProductDetail from "./pages/ProductDetail";
 import ContactUs from "./pages/Contact";
 import Gallery from "./pages/Gallery";
-import { FaWhatsapp } from "react-icons/fa";
+import WhatsAppButton from "./components/WhatsappButton";
 
 function App() {
   return (
@@ -26,13 +26,7 @@ function App() {
       </Routes>
 
       {/* whatsapp icon */}
-      <a
-        href="#"
-        className="fixed -right-18 top-1/2 hover:bg-green-600  z-50 -rotate-90 flex items-center gap-3 bg-green-500  text-white px-8 h-12 text-sm tracking-widest"
-      >
-        <FaWhatsapp size={20} />
-        <span className="hidden xl:inline">Whatsapp</span>
-      </a>
+      <WhatsAppButton />
     </BrowserRouter>
   );
 }

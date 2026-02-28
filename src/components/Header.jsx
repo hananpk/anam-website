@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from "react";
 import {
   ChevronDown,
-  MessageCircle,
   Menu,
   X,
   Search,
@@ -9,31 +8,27 @@ import {
 } from "lucide-react";
 import { IMAGES } from "../utils/assets";
 import { Link, useNavigate } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
 
 const megaMenuItems = [
   ["Flooring", "Wall Paneling & Cladding", "Doors", "Windows", "Partitions", "Ceiling", "Carpentry"],
-
   ["Profile & Accessories", "Kitchen & Wardrobe", "Lock and Handles", "Wood", "Solid Surface"],
-
-  ["Aluminum", "Stainless Steel", , "UPVC", "WPC", "Curtain and Blinds", "Shades and Fabric"],
-
+  ["Aluminum", "Stainless Steel", "UPVC", "WPC", "Curtain and Blinds", "Shades and Fabric"],
 ];
 
 const Header = () => {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile state
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false); // Mobile accordion state
   const [searchQuery, setSearchQuery] = useState("");
   const brandColor = "#63243B";
   const navigate = useNavigate();
-
-
 
   const filteredResults = useMemo(() => {
     if (!searchQuery) return [];
     return megaMenuItems.flat()
       .filter((item) =>
-        item?.includes(searchQuery.toLowerCase()),
+        item?.toLowerCase().includes(searchQuery.toLowerCase())
       )
       .slice(0, 8);
   }, [searchQuery]);
@@ -46,125 +41,55 @@ const Header = () => {
       .replace(/-+/g, "-")
       .replace(/^-+|-+$/g, "");
     navigate(`/products/${route}`);
-    console.log("helo", route);
+    setIsMegaMenuOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
+  const navLinks = [
+    { name: "HOME", path: "/" },
+    { name: "ABOUT US", path: "/about" },
+    { name: "SERVICES", path: "/services" },
+    { name: "CONTACT", path: "/contact" },
+  ];
+
   return (
-    <header className="static top-0 w-full z-50 bg-[#fff] ">
-      <div className="max-w-[1280px] mx-auto px-6 h-[90px] flex items-center justify-between relative">
+    <header className="sticky top-0 w-full z-50 bg-[#fff] border-b border-gray-100">
+      <div className="max-w-[1280px] mx-auto px-6 h-[70px] md:h-[90px] flex items-center justify-between relative">
+
         {/* Logo Section */}
-        <div
-          className={`flex items-center gap-3 shrink-0 ${isSearchOpen ? "hidden md:flex" : "flex"}`}
-        >
-          <div className="w-20 md:w-34">
+        <div className={`flex items-center gap-3 shrink-0 ${isSearchOpen ? "hidden md:flex" : "flex"}`}>
+          <div className="w-20 md:w-32">
             <Link to={"/"}>
               <img src={IMAGES.logo} alt="Logo" className="w-full h-auto" />
             </Link>
           </div>
         </div>
 
-        {/* Integrated Search Overlay */}
-        <div
-          className={`absolute inset-0 bg-[#fff] z-30 flex flex-col transition-all duration-300 ${isSearchOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
-        >
-          <div className="flex items-center px-10 h-20 border-b border-gray-100">
-            <Search size={22} className="text-gray-400" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="What are you looking for?"
-              className="w-full h-full px-6 outline-none text-xl text-black placeholder:text-gray-300 font-light"
-              autoFocus={isSearchOpen}
-            />
-            <button
-              onClick={() => {
-                setIsSearchOpen(false);
-                setSearchQuery("");
-              }}
-              className="p-2 hover:bg-gray-100 text-black hover:text-black"
-            >
-              <X size={28} />
-            </button>
-          </div>
-
-          {/* Real-time Search Results Panel */}
-          {searchQuery && (
-            <div className="bg-white absolute left-0 top-full w-full shadow-2xl max-h-[60vh] overflow-y-auto">
-              <div className="max-w-4xl mx-auto py-8 px-10">
-                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">
-                  Results
-                </p>
-                {filteredResults.length > 0 ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {filteredResults.map((result, i) => (
-                      <a
-                        key={i}
-                        href="#"
-                        className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 group transition-colors"
-                      >
-                        <div>
-                          <p className="text-sm font-bold text-gray-900">
-                            {result}
-                          </p>
-                        </div>
-                        <ArrowRight
-                          size={16}
-                          className="text-gray-300 group-hover:text-black transition-all group-hover:translate-x-1"
-                        />
-                      </a>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-gray-500 py-10 text-center italic">
-                    No products found matching "{searchQuery}"
-                  </p>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-10 h-full">
-          <a
-            href="/"
-            className="text-[13px] font-bold tracking-widest hover:opacity-70 transition-opacity text-black"
-          >
-            HOME
-          </a>
+          {navLinks.slice(0, 2).map((link) => (
+            <Link key={link.name} to={link.path} className="text-[13px] font-bold tracking-widest hover:opacity-70 transition-opacity text-black">
+              {link.name}
+            </Link>
+          ))}
 
-          <Link
-            to={"/about"}
-            className="text-[13px] font-bold tracking-widest text-black hover:text-black"
-          >
-            ABOUT US
-          </Link>
-
+          {/* Products Dropdown */}
           <div
-            className="h-full flex items-center"
+            className="h-full flex items-center relative"
             onMouseEnter={() => setIsMegaMenuOpen(true)}
             onMouseLeave={() => setIsMegaMenuOpen(false)}
           >
-            <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-widest text-black hover:text-black transition-colors h-full">
-              PRODUCTS{" "}
-              <ChevronDown
-                size={14}
-                className={isMegaMenuOpen ? "rotate-180" : ""}
-              />
+            <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-widest text-black hover:text-black transition-colors h-full uppercase">
+              PRODUCTS <ChevronDown size={14} className={isMegaMenuOpen ? "rotate-180 transition-transform" : "transition-transform"} />
             </button>
 
-            {/* Mega Menu */}
             {isMegaMenuOpen && (
-              <div className="absolute left-1/2 top-full w-[80vw] max-w-3xl bg-white shadow-2xl border border-gray-100 p-12 grid grid-cols-3 gap-10 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
+              <div className="absolute left-1/2 top-full w-[80vw] max-w-3xl bg-white shadow-2xl border border-gray-100 p-10 grid grid-cols-3 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
                 {megaMenuItems.map((column, colIdx) => (
-                  <ul key={colIdx} className="space-y-4">
+                  <ul key={colIdx} className="space-y-3">
                     {column.map((item, i) => (
-                      <li
-                        key={i}
-                        onClick={() => handleClickProducts(item)}
-                        className="group cursor-pointer"
-                      >
-                        <span className="text-[13px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-[#63243B]">
+                      <li key={i} onClick={() => handleClickProducts(item)} className="group cursor-pointer">
+                        <span className="text-[12px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-[#63243B]">
                           {item}
                         </span>
                       </li>
@@ -174,29 +99,113 @@ const Header = () => {
               </div>
             )}
           </div>
-          <a
-            href="#"
-            className="text-[13px] font-bold tracking-widest text-black hover:text-black"
-          >
-            SERVICES
-          </a>
-          <a
-            href="#"
-            className="text-[13px] font-bold tracking-widest text-black hover:text-black"
-          >
-            CONTACT
-          </a>
+
+          {navLinks.slice(2).map((link) => (
+            <Link key={link.name} to={link.path} className="text-[13px] font-bold tracking-widest hover:opacity-70 transition-opacity text-black">
+              {link.name}
+            </Link>
+          ))}
         </nav>
+
+        {/* Search Overlay */}
+        <div className={`absolute inset-0 bg-white z-50 flex flex-col transition-all duration-300 ${isSearchOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
+          <div className="flex items-center px-6 md:px-10 h-full border-b border-gray-100">
+            <Search size={22} className="text-gray-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="What are you looking for?"
+              className="w-full h-full px-4 md:px-6 outline-none text-lg md:text-xl text-black placeholder:text-gray-300 font-light"
+              autoFocus={isSearchOpen}
+            />
+            <button onClick={() => { setIsSearchOpen(false); setSearchQuery(""); }} className="p-2 text-black hover:bg-gray-100 rounded-full">
+              <X size={24} />
+            </button>
+          </div>
+
+          {searchQuery && (
+            <div className="bg-white absolute left-0 top-full w-full shadow-2xl max-h-[60vh] overflow-y-auto border-t border-gray-100">
+              <div className="max-w-4xl mx-auto py-6 px-6 md:px-10">
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Results</p>
+                {filteredResults.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {filteredResults.map((result, i) => (
+                      <button key={i} onClick={() => { handleClickProducts(result); setIsSearchOpen(false); }} className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 group transition-colors text-left w-full">
+                        <span className="text-sm font-bold text-gray-900">{result}</span>
+                        <ArrowRight size={16} className="text-gray-300 group-hover:text-black transition-all group-hover:translate-x-1" />
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-500 py-10 text-center italic">No products found matching "{searchQuery}"</p>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Mobile Menu Drawer */}
+        <div className={`fixed inset-0 bg-black/50 z-[100] transition-opacity lg:hidden ${isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`} onClick={() => setIsMobileMenuOpen(false)}>
+          <div className={`absolute left-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-xl flex flex-col transition-transform duration-300 ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}`} onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-6 border-b border-gray-100">
+              <img src={IMAGES.logo} alt="Logo" className="w-20" />
+              <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-black"><X size={24} /></button>
+            </div>
+
+            <div className="flex-grow overflow-y-auto p-6">
+              <nav className="flex flex-col gap-6">
+                {navLinks.slice(0, 2).map((link) => (
+                  <Link key={link.name} to={link.path} onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-bold tracking-widest text-black">
+                    {link.name}
+                  </Link>
+                ))}
+
+                {/* Mobile Products Accordion */}
+                <div>
+                  <button
+                    onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                    className="flex items-center justify-between w-full text-sm font-bold tracking-widest text-black"
+                  >
+                    PRODUCTS <ChevronDown size={18} className={mobileProductsOpen ? "rotate-180" : ""} />
+                  </button>
+                  <div className={`mt-4 space-y-4 overflow-hidden transition-all duration-300 ${mobileProductsOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}>
+                    {megaMenuItems.flat().map((item, i) => (
+                      <button
+                        key={i}
+                        onClick={() => handleClickProducts(item)}
+                        className="block w-full text-left text-[12px] text-gray-500 hover:text-[#63243B] pl-4 border-l border-gray-100 py-1"
+                      >
+                        {item}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {navLinks.slice(2).map((link) => (
+                  <Link key={link.name} to={link.path} onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-bold tracking-widest text-black">
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </div>
 
         {/* Right Action Tray */}
         <div className="flex items-center">
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="p-5 hover:bg-gray-50 hover:text-black transition-colors text-black border-x border-gray-100"
+            className="p-4 md:p-5 hover:bg-gray-50 hover:text-black transition-colors text-black border-l md:border-x border-gray-100"
           >
             <Search size={20} />
           </button>
-
+          <button
+            className="lg:hidden p-2 -ml-2 text-black"
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <Menu size={24} />
+          </button>
         </div>
       </div>
     </header>
