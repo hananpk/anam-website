@@ -174,14 +174,18 @@ const Header = () => {
               </div>
             )}
           </div>
-
-
-          {/* <a
+          <a
+            href="#"
+            className="text-[13px] font-bold tracking-widest text-black hover:text-black"
+          >
+            SERVICES
+          </a>
+          <a
             href="#"
             className="text-[13px] font-bold tracking-widest text-black hover:text-black"
           >
             CONTACT
-          </a> */}
+          </a>
         </nav>
 
         {/* Right Action Tray */}
