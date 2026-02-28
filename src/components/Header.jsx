@@ -9,14 +9,15 @@ import {
 } from "lucide-react";
 import { IMAGES } from "../utils/assets";
 import { Link, useNavigate } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 const megaMenuItems = [
   ["Flooring", "Wall Paneling & Cladding", "Doors", "Windows", "Partitions", "Ceiling", "Carpentry"],
-  
+
   ["Profile & Accessories", "Kitchen & Wardrobe", "Lock and Handles", "Wood", "Solid Surface"],
-  
-  ["Aluminum", "Stainless Steel",, "UPVC", "WPC", "Curtain and Blinds", "Shades and Fabric"],
-  
+
+  ["Aluminum", "Stainless Steel", , "UPVC", "WPC", "Curtain and Blinds", "Shades and Fabric"],
+
 ];
 
 const Header = () => {
@@ -26,30 +27,30 @@ const Header = () => {
   const brandColor = "#63243B";
   const navigate = useNavigate();
 
-  
+
 
   const filteredResults = useMemo(() => {
     if (!searchQuery) return [];
     return megaMenuItems.flat()
       .filter((item) =>
-          item?.includes(searchQuery.toLowerCase()),
+        item?.includes(searchQuery.toLowerCase()),
       )
       .slice(0, 8);
   }, [searchQuery]);
 
   const handleClickProducts = (item) => {
     const route = item
-    .toLowerCase()
-    .replace(/&/g, "")         
-    .replace(/\s+/g, "-")      
-    .replace(/-+/g, "-")       
-    .replace(/^-+|-+$/g, "");
+      .toLowerCase()
+      .replace(/&/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "");
     navigate(`/products/${route}`);
     console.log("helo", route);
   };
 
   return (
-    <header className="static top-0 w-full z-50 bg-[#b22a2a] ">
+    <header className="static top-0 w-full z-50 bg-[#fff] ">
       <div className="max-w-[1280px] mx-auto px-6 h-[90px] flex items-center justify-between relative">
         {/* Logo Section */}
         <div
@@ -57,14 +58,14 @@ const Header = () => {
         >
           <div className="w-20 md:w-34">
             <Link to={"/"}>
-              <img src={IMAGES.logo_white} alt="Logo" className="w-full h-auto" />
+              <img src={IMAGES.logo} alt="Logo" className="w-full h-auto" />
             </Link>
           </div>
         </div>
 
         {/* Integrated Search Overlay */}
         <div
-          className={`absolute inset-0 bg-[#b22a2a] z-30 flex flex-col transition-all duration-300 ${isSearchOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
+          className={`absolute inset-0 bg-[#fff] z-30 flex flex-col transition-all duration-300 ${isSearchOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
         >
           <div className="flex items-center px-10 h-20 border-b border-gray-100">
             <Search size={22} className="text-gray-400" />
@@ -73,7 +74,7 @@ const Header = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="What are you looking for?"
-              className="w-full h-full px-6 outline-none text-xl text-white placeholder:text-gray-300 font-light"
+              className="w-full h-full px-6 outline-none text-xl text-black placeholder:text-gray-300 font-light"
               autoFocus={isSearchOpen}
             />
             <button
@@ -81,7 +82,7 @@ const Header = () => {
                 setIsSearchOpen(false);
                 setSearchQuery("");
               }}
-              className="p-2 hover:bg-gray-100 text-white hover:text-black"
+              className="p-2 hover:bg-gray-100 text-black hover:text-black"
             >
               <X size={28} />
             </button>
@@ -127,17 +128,24 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-10 h-full">
           <a
             href="/"
-            className="text-[13px] font-bold tracking-widest hover:opacity-70 transition-opacity text-white"
+            className="text-[13px] font-bold tracking-widest hover:opacity-70 transition-opacity text-black"
           >
             HOME
           </a>
+
+          <Link
+            to={"/about"}
+            className="text-[13px] font-bold tracking-widest text-black hover:text-black"
+          >
+            ABOUT US
+          </Link>
 
           <div
             className="h-full flex items-center"
             onMouseEnter={() => setIsMegaMenuOpen(true)}
             onMouseLeave={() => setIsMegaMenuOpen(false)}
           >
-            <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-widest text-white hover:text-black transition-colors h-full">
+            <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-widest text-black hover:text-black transition-colors h-full">
               PRODUCTS{" "}
               <ChevronDown
                 size={14}
@@ -147,61 +155,44 @@ const Header = () => {
 
             {/* Mega Menu */}
             {isMegaMenuOpen && (
-<div className="absolute left-1/2 top-full w-[80vw] max-w-3xl bg-white shadow-2xl border border-gray-100 p-12 grid grid-cols-3 gap-10 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
-    {megaMenuItems.map((column, colIdx) => (
-      <ul key={colIdx} className="space-y-4">
-        {column.map((item, i) => (
-          <li
-            key={i}
-            onClick={() => handleClickProducts(item)}
-            className="group cursor-pointer"
-          >
-            <span className="text-[13px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-[#63243B]">
-              {item}
-            </span>
-          </li>
-        ))}
-      </ul>
-    ))}
-  </div>
-)}
+              <div className="absolute left-1/2 top-full w-[80vw] max-w-3xl bg-white shadow-2xl border border-gray-100 p-12 grid grid-cols-3 gap-10 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
+                {megaMenuItems.map((column, colIdx) => (
+                  <ul key={colIdx} className="space-y-4">
+                    {column.map((item, i) => (
+                      <li
+                        key={i}
+                        onClick={() => handleClickProducts(item)}
+                        className="group cursor-pointer"
+                      >
+                        <span className="text-[13px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-[#63243B]">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ))}
+              </div>
+            )}
           </div>
 
-          <a
+
+          {/* <a
             href="#"
-            className="text-[13px] font-bold tracking-widest text-white hover:text-black"
-          >
-            ABOUT US
-          </a>
-          <a
-            href="#"
-            className="text-[13px] font-bold tracking-widest text-white hover:text-black"
-          >
-            BLOG
-          </a>
-          <a
-            href="#"
-            className="text-[13px] font-bold tracking-widest text-white hover:text-black"
+            className="text-[13px] font-bold tracking-widest text-black hover:text-black"
           >
             CONTACT
-          </a>
+          </a> */}
         </nav>
 
         {/* Right Action Tray */}
         <div className="flex items-center">
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="p-5 hover:bg-gray-50 hover:text-black transition-colors text-white border-x border-gray-100"
+            className="p-5 hover:bg-gray-50 hover:text-black transition-colors text-black border-x border-gray-100"
           >
             <Search size={20} />
           </button>
-          <a
-            href="#"
-            className="flex items-center gap-3  text-white px-8 h-20 text-sm tracking-widest"
-          >
-            <MessageCircle size={20} />
-            <span className="hidden xl:inline">Contact</span>
-          </a>
+
         </div>
       </div>
     </header>

@@ -25,7 +25,11 @@ import table from '../assets/images/table.jpg';
 import bg_3 from '../assets/images/bg3.jpg';
 import bg_4 from '../assets/images/bg4.jpg';
 import interior from '../assets/images/interior.png';
+import foldingDoor from '../assets/images/folding-doors.png';
+import woodenDoor from '../assets/images/wood-door.png';
 import interior1 from '../assets/images/interior1.png';
+import floor from '../assets/images/floor.png';
+import shades from '../assets/images/shades.jpg';
 
 
 export const IMAGES = {
@@ -57,4 +61,8 @@ export const IMAGES = {
     bg_4,
     interior,
     interior1,
+foldingDoor,
+woodenDoor,
+floor,
+shades
 }

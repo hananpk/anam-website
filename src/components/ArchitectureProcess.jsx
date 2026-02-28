@@ -46,22 +46,19 @@ const ArchitectureProcess = () => {
         <div className="mb-20 gap-8 flex flex-col lg:flex-row items-center">
           <div>
             <div className="max-w-2xl">
-              <span className="inline-block px-4 py-1 border border-gray-300 text-[10px] uppercase tracking-widest font-bold mb-6">
+              {/* <span className="inline-block px-4 py-1 border border-gray-300 text-[10px] uppercase tracking-widest font-bold mb-6">
                 • How We Work
-              </span>
+              </span> */}
               <h2 className="text-5xl font-bold text-[#1a1a1a]">
-                Description <span className="text-[#b22a2a]">Architecture</span>
-                <br />
-                <span className="text-[#b22a2a]">Process</span> For Exceptional
-                Results.
+                How We Work
               </h2>
             </div>
             <div className="max-w-md">
-              <p className="text-gray-500 text-lg leading-relaxed pt-4">
+              {/* <p className="text-gray-500 text-lg leading-relaxed pt-4">
                 Our process is alive – adapting, refining, and growing with your
                 vision. Always. Like artists with a blank canvas, we transform
                 rooms into living works of art.
-              </p>
+              </p> */}
             </div>
           </div>
           {/* <div className="w-1/2">

@@ -13,32 +13,33 @@ import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 const slides = [
   {
-    image: IMAGES.interior,
+    image: IMAGES.shades,
     title: ["Premium SPD", "Flooring Solutions"],
     subtitle: "Durability Meets Style",
     desc: "Upgrade your space with our water-resistant, high-durability SPC flooring available in various modern textures and finishes.",
     cta: "Explore Flooring",
   },
   {
-    image: IMAGES.interior1,
+    image: IMAGES.foldingDoor,
     title: ["Elegant", "Wall Coverings"],
     subtitle: "Transform Your Walls",
     desc: "Choose from our exclusive collection of wallpapers to add character, warmth, and sophistication to any room.",
     cta: "View Wallpapers",
   },
   {
-    image: IMAGES.doors,
+    image: IMAGES.woodenDoor,
     title: ["Modern & Secure", "Door Collection"],
     subtitle: "Security & Aesthetics",
     desc: "Discover our range of high-quality doors designed strictly for security without compromising on style.",
     cta: "Browse Doors",
   },
   {
-    image: IMAGES.plants,
-    title: ["Lush Indoor", "Greenery"],
-    subtitle: "Bring Nature Inside",
-    desc: "Enhance your interior environment with our selection of lifelike artificial plants and greenery solutions.",
+    image: IMAGES.floor,
+    title: ["Lush Minimalism", "Minimalist"],
+    subtitle: "Bring Minimalism",
+    desc: "Enhance your interior environment with our selection of life like artificial plants and greenery solutions.",
     cta: "See Collection",
+
   },
 ];
 
@@ -105,21 +106,17 @@ const Spotlight = () => {
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={i} className="overflow-hidden">
-            <div className="relative w-full h-full flex items-center justify-center text-center">
+            <div className="relative w-full h-full flex items-center justify-center text-left">
               <img
                 src={slide.image}
                 alt=""
                 className="bg-image absolute inset-0 w-full h-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/60" />
+              <div className="absolute inset-0 bg-black/30" />
 
-              <div className="relative z-10 max-w-4xl px-6">
-                <p className="desc-line text-sm md:text-base uppercase tracking-widest text-[#fff]">
-                  {slide.subtitle}
-                </p>
-
-                <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight mt-4">
+              <div className="absolute left-8 bottom-12 z-10 max-w-4xl px-6">
+                <h1 className="text-white text-4xl md:text-5xl font-bold leading-[1.2em] mt-4">
                   {slide.title.map((line, idx) => (
                     <span key={idx} className="block overflow-hidden">
                       <span className="title-line block text-[#fff]">
@@ -129,16 +126,13 @@ const Spotlight = () => {
                   ))}
                 </h1>
 
-                <p className="desc-line mt-6 text-[#fff] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                <p className="desc-line mt-6 text-[#fff] text-lg md:text-lg leading-relaxed max-w-xl mx-auto">
                   {slide.desc}
                 </p>
 
-                <div className="mt-10 flex justify-center gap-4">
+                <div className="mt-10 flex justify-start gap-4">
                   <button className="px-8 py-4 bg-white text-black font-semibold hover:bg-red-900 hover:text-white transition-colors duration-300">
                     {slide.cta}
-                  </button>
-                  <button className="px-8 py-4 border border-white text-white font-semibold hover:bg-white hover:text-black transition-colors duration-300">
-                    Contact Us
                   </button>
                 </div>
               </div>

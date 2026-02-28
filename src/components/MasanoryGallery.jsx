@@ -8,7 +8,7 @@ const GalleryCard = memo(({ image, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: index * 0.05 }}
-    className="relative group overflow-hidden rounded-[2rem] break-inside-avoid shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer mb-8"
+    className="relative group overflow-hidden break-inside-avoid shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer mb-8"
   >
     <img
       src={`${image.src}?auto=format&fit=crop&q=80&w=800`}
@@ -48,7 +48,7 @@ const MasonryGallery = () => {
   return (
     <section className="px-6 py-6">
       <div className="max-w-7xl mx-auto">
-        <div className="relative h-[50vh] md:h-[65vh] rounded-[2.5rem] overflow-hidden shadow-2xl mb-12 bg-black">
+        <div className="relative h-[50vh] md:h-[65vh] overflow-hidden shadow-2xl mb-12 bg-black">
           {prevIndex !== null && (
             <div
               className="absolute inset-0 w-full h-full bg-cover bg-center"
@@ -69,7 +69,7 @@ const MasonryGallery = () => {
               style={{ backgroundImage: `url(${galleryImages[bgIndex].src})` }}
             >
               <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute inset-0 flex flex-col justify-end p-12 text-white">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 text-white">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -78,7 +78,7 @@ const MasonryGallery = () => {
                   <p className="text-[#c29d59] font-bold uppercase tracking-widest text-xs mb-3">
                     Featured Interior
                   </p>
-                  <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">
+                  <h2 className="text-2xl md:text-5xl font-bold uppercase tracking-tighter leading-none">
                     {galleryImages[bgIndex].title}
                   </h2>
                 </motion.div>

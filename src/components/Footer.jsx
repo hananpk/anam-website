@@ -29,14 +29,8 @@ const Footer = () => {
     { icon: <FaTwitter size={20} />, name: "Twitter", href: "#" },
   ];
   return (
-    <footer className="relative bg-[#1a1a1a] text-white pt-24 overflow-hidden pb-10">
-      {/* Decorative Background Image & Text Overlay */}
+    <footer className="relative bg-[#b22a2a] text-white pt-24 overflow-hidden pb-10">
       <div className="absolute inset-0 z-0 opacity-20">
-        {/* <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80"
-          alt="Background Interior"
-          className="w-full h-full object-cover grayscale"
-        /> */}
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
@@ -44,13 +38,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-20">
           {/* Brand Column */}
           <div className="space-y-8">
-            <div className="flex items-center gap-2">
-              <img src={IMAGES.logo} alt="" />
+            <div className="flex items-center gap-2 w-40">
+              <img src={IMAGES.logo_white} alt="" />
             </div>
-            <p className="text-gray-400 font-medium leading-relaxed max-w-[280px]">
+            <p className="text-white font-medium leading-relaxed max-w-[280px]">
               We Transform Your Vision Into Beautifully Crafted Spaces.
             </p>
-            <div className="text-gray-400 text-sm">
+            <div className="text-white text-sm">
               Street No.3083, Bld No. 136, Zone No. 91, Logistic Park, Birkat Al
               Awamer, P.O. Box No. 82036, Doha, Qatar
             </div>
@@ -62,7 +56,7 @@ const Footer = () => {
               <li key={link}>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
+                  className="text-white hover:text-white transition-colors duration-300 font-medium"
                 >
                   {link}
                 </a>
@@ -76,7 +70,7 @@ const Footer = () => {
               <li key={link}>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
+                  className="text-white hover:text-white transition-colors duration-300 font-medium"
                 >
                   {link}
                 </a>
@@ -109,7 +103,7 @@ const Footer = () => {
                   key={social.name}
                   href={social.href}
                   aria-label={social.name}
-                  className="text-gray-400 hover:text-[#c29d59] transition-all duration-300 transform hover:-translate-y-1"
+                  className="text-white hover:text-[#000] transition-all duration-300 transform hover:-translate-y-1"
                 >
                   {social.icon}
                 </a>
@@ -119,7 +113,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-center items-center gap-4 text-gray-500 text-sm">
+        <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-center items-center gap-4 text-white text-sm">
           <p>
             © Copyright 2026 <span className="text-[#fff]">Anam</span>. All
             rights reserved.
