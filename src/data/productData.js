@@ -26,7 +26,7 @@ import wpcOutdoorPanels from "../assets/images/wall panels/WPC Outdoor  Panels.j
 import mdf from "../assets/images/wall panels/mdf.jpg";
 import hpl from "../assets/images/wall panels/HPL Wooden  Panels.webp";
 import wpc from "../assets/images/wall panels/wpc.jpg";
-import uv from "../assets/images/wall panels/UV Panel.jpg";
+import uv from "../assets/images/wall panels/uv-panel.jpg";
 import wallFinishes from "../assets/images/wall panels/wall finishes.jpg";
 import doors from "../assets/images/door/dooes.jpg";
 import aluminiumDoor from "../assets/images/door/door aluminium.jpeg";
