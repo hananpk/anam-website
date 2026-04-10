@@ -89,7 +89,7 @@ const Header = () => {
                   <ul key={colIdx} className="space-y-3">
                     {column.map((item, i) => (
                       <li key={i} onClick={() => handleClickProducts(item)} className="group cursor-pointer">
-                        <span className="text-[12px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-[#63243B]">
+                        <span className="text-[14px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-[#63243B]">
                           {item}
                         </span>
                       </li>

@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { LuArrowRight } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import { productData } from "../data/productData";
 
 // Import Swiper React components and styles
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,23 +9,18 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { productData } from "../data/productData";
 
 const TailoredServices = () => {
-
-  const brandColor = "#8B2323"; 
-  const products = productData.flatMap(product => product.items);
+  const brandColor = "#8B2323";
+  const products = productData;
 
   return (
-    <section className="container mx-auto py-24 px-4 bg-white font-sans">
-      <div className="max-w-[1200px] mx-auto"> 
-        
-        <div className="flex items-center justify-between border-b border-gray-100 pb-8 mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 tracking-tight">
-            Best Products
-          </h2>
-          <div className="hidden md:flex gap-2">
-            
-          </div>
+    <section className="container mx-auto pt-24 px-4 bg-white font-sans">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="flex items-center justify-between mb-12">
+          <h2 className="md:text-5xl text-3xl text-gray-800">Best Products</h2>
+          <div className="hidden md:flex gap-2"></div>
         </div>
 
         <Swiper
@@ -44,9 +38,9 @@ const TailoredServices = () => {
               slidesPerView: 3,
             },
           }}
-          className="!pb-[50px]" 
+          className="!pb-[50px]"
         >
-          {products.slice(0, 10).map((product, index) => (
+          {products.slice(0, 10)?.map((product, index) => (
             <SwiperSlide key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -68,7 +62,7 @@ const TailoredServices = () => {
                   <h5 className="text-sm mb-4 font-bold text-[#b22a2a] leading-tight uppercase tracking-wider">
                     {product?.name}
                   </h5>
-                  
+
                   <div className="flex flex-col gap-3 mb-4 flex-grow">
                     <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-3">
                       {product?.description}
@@ -81,7 +75,7 @@ const TailoredServices = () => {
                     </span>
                     <Link
                       to="/contact"
-                      style={{ transition: 'all 0.3s ease' }}
+                      style={{ transition: "all 0.3s ease" }}
                       className="p-2 bg-[#b22a2a] text-white border border-gray-200 hover:border-[#8B2323] hover:text-[#fff] hover:shadow-md"
                     >
                       <LuArrowRight size={18} />
@@ -95,18 +89,19 @@ const TailoredServices = () => {
       </div>
 
       <style jsx global>{`
-        .swiper-button-next, .swiper-button-prev {
-          color: #8B2323 !important;
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #8b2323 !important;
           transform: scale(0.7);
         }
         .swiper-pagination-bullet-active {
-          background: #8B2323 !important;
+          background: #8b2323 !important;
         }
-        .swiper-pagination{
+        .swiper-pagination {
           position: absolute;
           bottom: -26px !important;
           left: 50%;
-          }
+        }
       `}</style>
     </section>
   );

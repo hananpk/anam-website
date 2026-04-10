@@ -3,24 +3,14 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import { IMAGES } from "../utils/assets";
 
 const Footer = () => {
-  const footerLinks = {
-    column1: [
-      "About Us",
-      "Services",
-      "Careers",
-      "Our Team",
-      "Blog",
-      "Contact Us",
-    ],
-    column2: [
-      "Our Projects",
-      "Partners",
-      "Partners Program",
-      "Affiliate Program",
-      "Terms & Conditions",
-      "Support Center",
-    ],
-  };
+  const footerLinks = [
+    "About Us",
+    "Services",
+    "Our Projects",
+    "Our Team",
+    "Blog",
+    "Contact Us",
+  ];
 
   const socialLinks = [
     { icon: <FaInstagram size={20} />, name: "Instagram", href: "#" },
@@ -28,84 +18,74 @@ const Footer = () => {
     { icon: <FaYoutube size={22} />, name: "YouTube", href: "#" },
     { icon: <FaTwitter size={20} />, name: "Twitter", href: "#" },
   ];
+
   return (
     <footer className="relative bg-[#b22a2a] text-white pt-24 overflow-hidden pb-10">
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-20">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
+
           {/* Brand Column */}
           <div className="space-y-8">
-            <div className="flex items-center gap-2 w-40">
-              <img src={IMAGES.logo_white} alt="" />
+            <div className="flex items-center gap-2 w-32 md:w-40">
+              <img src={IMAGES.logo_white} alt="Anam Logo" className="w-full h-auto" />
             </div>
-            <p className="text-white font-medium leading-relaxed max-w-[280px]">
-              We Transform Your Vision Into Beautifully Crafted Spaces.
+            <p className="text-white/90 font-medium leading-relaxed max-w-sm">
+              We Transform Your Vision Into Beautifully Crafted Spaces with precision and over 10 years of architectural excellence.
             </p>
-            <div className="text-white text-sm">
-              Street No.3083, Bld No. 136, Zone No. 91, Logistic Park, Birkat Al
-              Awamer, P.O. Box No. 82036, Doha, Qatar
+            <div className="text-white/80 text-sm leading-loose">
+              Street No.3083, Bld No. 136, Zone No. 91, <br />
+              Logistic Park, Birkat Al Awamer, <br />
+              Doha, Qatar
             </div>
           </div>
 
-          {/* Links Column 1 */}
-          <ul className="space-y-4">
-            {footerLinks.column1.map((link) => (
-              <li key={link}>
-                <a
-                  href="#"
-                  className="text-white hover:text-white transition-colors duration-300 font-medium"
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* Links Column 2 */}
-          <ul className="space-y-4">
-            {footerLinks.column2.map((link) => (
-              <li key={link}>
-                <a
-                  href="#"
-                  className="text-white hover:text-white transition-colors duration-300 font-medium"
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
+          {/* Links Column */}
+          <div className="lg:pl-20">
+            <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-white/50">Navigation</h4>
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-4">
+              {footerLinks.map((link) => (
+                <li key={link}>
+                  <a
+                    href="#"
+                    className="text-white/90 hover:text-white hover:pl-2 transition-all duration-300 font-medium text-sm inline-block"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Contact Column */}
-          <div className="space-y-6 lg:text-right">
-            <div>
+          <div className="space-y-8 lg:text-right">
+            <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-2 text-white/50">Get in Touch</h4>
+            <div className="space-y-2">
               <a
                 href="tel:+97430081007"
-                className="text-lg hover:opacity-80 transition-opacity"
+                className="text-3xl font-bold hover:opacity-80 transition-opacity block"
               >
                 +974 30081007
               </a>
-            </div>
-            <div>
               <a
                 href="mailto:info@anamqatar.com"
-                className="text-lg hover:opacity-80 transition-colors break-words"
+                className="text-sm font-medium hover:text-black transition-colors block"
               >
                 info@anamqatar.com
               </a>
             </div>
 
-            <div className="flex gap-6 lg:justify-end pt-8">
+            <div className="flex gap-4 lg:justify-end pt-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  aria-label={social.name}
-                  className="text-white hover:text-[#000] transition-all duration-300 transform hover:-translate-y-1"
+                  className="bg-white/10 p-3 rounded-full hover:bg-white hover:text-[#b22a2a] transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  {social.icon}
+                  {React.cloneElement(social.icon, { size: 18 })}
                 </a>
               ))}
             </div>
@@ -113,16 +93,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-center items-center gap-4 text-white text-sm">
-          <p>
-            © Copyright 2026 <span className="text-[#fff]">Anam</span>. All
-            rights reserved.
-          </p>
+        <div className="border-t border-white/10 pt-10 flex flex-col md:row justify-between items-center gap-4 text-white/40 text-[11px] tracking-[0.2em] font-bold uppercase">
+          <p>© 2026 Anam Trading & Contracting. All Rights Reserved.</p>
         </div>
       </div>
-      {/* <h2 className=" text-center -mt-8 h-auto text-[10vw] font-black text-white/[0.12] uppercase pointer-events-none select-none">
-        anam
-      </h2> */}
     </footer>
   );
 };

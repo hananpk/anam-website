@@ -13,35 +13,35 @@ import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 const slides = [
   {
-    image: IMAGES.shades,
-    title: ["Premium SPD", "Flooring Solutions"],
+    image: IMAGES.flooring_1,
+    title: ["Premium", "Flooring Solutions"],
     subtitle: "Durability Meets Style",
-    desc: "Upgrade your space with our water-resistant, high-durability SPC flooring available in various modern textures and finishes.",
+    desc: "Upgrade your interiors with premium SPC flooring that combines durability, water resistance, and modern aesthetics for long-lasting elegant spaces.",
     cta: "Explore Flooring",
   },
   {
     image: IMAGES.foldingDoor,
-    title: ["Elegant", "Wall Coverings"],
+    title: ["Elegant", "Aluminium Partitions"],
     subtitle: "Transform Your Walls",
-    desc: "Choose from our exclusive collection of wallpapers to add character, warmth, and sophistication to any room.",
+    desc: "Create stylish and functional spaces with our sleek aluminium partitions designed for flexibility, durability, and modern interior aesthetics.",
     cta: "View Wallpapers",
   },
   {
-    image: IMAGES.woodenDoor,
+    image: IMAGES.door,
     title: ["Modern & Secure", "Door Collection"],
     subtitle: "Security & Aesthetics",
-    desc: "Discover our range of high-quality doors designed strictly for security without compromising on style.",
+    desc: "Explore our premium door collection crafted for superior security, durability, and contemporary design that complements any interior.",
     cta: "Browse Doors",
   },
   {
-    image: IMAGES.floor,
-    title: ["Lush Minimalism", "Minimalist"],
+    image: IMAGES.wallpannel,
+    title: ["Minimalist", "Wall Panels"],
     subtitle: "Bring Minimalism",
-    desc: "Enhance your interior environment with our selection of life like artificial plants and greenery solutions.",
+    desc: "Enhance your walls with elegant minimalist wall panels that add depth, texture, and a refined modern look to your interiors.",
     cta: "See Collection",
-
   },
 ];
+
 
 const Spotlight = () => {
   const sectionRef = useRef(null);
@@ -115,8 +115,8 @@ const Spotlight = () => {
 
               <div className="absolute inset-0 bg-black/30" />
 
-              <div className="absolute left-24 bottom-14 z-10 max-w-4xl px-6">
-                <h1 className="text-white text-4xl md:text-5xl font-bold leading-[1.2em] mt-4">
+              <div className="absolute left-4 md:left-24 bottom-[120px] z-10 max-w-4xl px-6">
+                <h1 className="text-white text-3xl md:text-5xl font-bold uppercase leading-[1.1em] mt-4">
                   {slide.title.map((line, idx) => (
                     <span key={idx} className="block overflow-hidden">
                       <span className="title-line block text-[#fff]">
@@ -126,15 +126,15 @@ const Spotlight = () => {
                   ))}
                 </h1>
 
-                <p className="desc-line mt-6 text-[#fff] text-lg md:text-lg leading-relaxed max-w-xl mx-auto">
+                <p className="desc-line mt-6 text-[#fff] text-md md:text-lg leading-relaxed max-w-xl">
                   {slide.desc}
                 </p>
 
-                <div className="mt-10 flex justify-start gap-4">
+                {/* <div className="mt-10 flex justify-start gap-4">
                   <button className="px-8 py-4 bg-white text-black font-semibold hover:bg-red-900 hover:text-white transition-colors duration-300">
                     {slide.cta}
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </SwiperSlide>

@@ -43,14 +43,11 @@ const ArchitectureProcess = () => {
       }}
     >
       <div className="container mx-auto px-6">
-        <div className="mb-20 gap-8 flex flex-col lg:flex-row items-center">
+        <div className="md:mb-20 mb-10 gap-8 flex flex-col lg:flex-row">
           <div>
             <div className="max-w-2xl">
-              {/* <span className="inline-block px-4 py-1 border border-gray-300 text-[10px] uppercase tracking-widest font-bold mb-6">
-                • How We Work
-              </span> */}
-              <h2 className="text-5xl font-bold text-[#1a1a1a]">
-                How We Work
+              <h2 className="md:text-5xl text-3xl text-[#1a1a1a] ">
+                How we work
               </h2>
             </div>
             <div className="max-w-md">

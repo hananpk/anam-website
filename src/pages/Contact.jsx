@@ -9,7 +9,7 @@ const ContactUs = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Side: Contact Information */}
           <div className="space-y-8">
-            <h1 className="text-6xl md:text-7xl font-bold tracking-tight text-gray-900 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
               Get in — <br />
               <span className="text-gray-900">touch with us</span>
             </h1>
@@ -46,7 +46,7 @@ const ContactUs = () => {
           </div>
 
           {/* Right Side: Contact Form Card */}
-          <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100">
+          <div className="bg-white p-8 md:p-12 shadow-sm border border-gray-100">
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -56,7 +56,7 @@ const ContactUs = () => {
                   <input
                     type="text"
                     placeholder="Enter your first name..."
-                    className="w-full bg-[#f4f4f4] border-none rounded-2xl p-4 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400"
+                    className="w-full bg-[#f4f4f4] border-none p-4 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400"
                   />
                 </div>
                 <div className="space-y-2">
@@ -66,7 +66,7 @@ const ContactUs = () => {
                   <input
                     type="text"
                     placeholder="Enter your last name..."
-                    className="w-full bg-[#f4f4f4] border-none rounded-2xl p-4 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400"
+                    className="w-full bg-[#f4f4f4] border-none p-4 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400"
                   />
                 </div>
               </div>
@@ -78,7 +78,7 @@ const ContactUs = () => {
                 <input
                   type="email"
                   placeholder="Enter your email address..."
-                  className="w-full bg-[#f4f4f4] border-none rounded-2xl p-4 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400"
+                  className="w-full bg-[#f4f4f4] border-none p-4 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400"
                 />
               </div>
 
@@ -89,12 +89,12 @@ const ContactUs = () => {
                 <textarea
                   rows="5"
                   placeholder="Enter your message..."
-                  className="w-full bg-[#f4f4f4] border-none rounded-3xl p-6 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400 resize-none"
+                  className="w-full bg-[#f4f4f4] border-none p-6 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:text-gray-400 resize-none"
                 ></textarea>
               </div>
 
               <div className="flex justify-end pt-4">
-                <button className="px-8 py-4 bg-red-900 text-white rounded-full font-semibold hover:bg-red-900  flex items-center hover:text-white transition-colors duration-300">
+                <button className="px-8 py-4 bg-red-900 text-white font-semibold hover:bg-red-900  flex items-center hover:text-white transition-colors duration-300">
                   Submit
                   <span className="block ml-2">
                     <LuArrowRight />

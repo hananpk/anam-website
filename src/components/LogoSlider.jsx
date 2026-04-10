@@ -53,7 +53,7 @@ export default function LogoSlider() {
         `}
       </style>
 
-      <div className="track mt-10">
+      <div className="track mt-10 pb-10">
         <div className="wrapper-left">
           {logos.map((logo, i) => (
             <div key={i} className="logo-item">

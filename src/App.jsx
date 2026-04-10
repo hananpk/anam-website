@@ -23,6 +23,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/products/:slug" element={<ProductDetail />} />
+        <Route path="/products/:slug/:subslug" element={<ProductDetail />} />
       </Routes>
 
       {/* whatsapp icon */}

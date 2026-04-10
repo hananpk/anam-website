@@ -19,9 +19,9 @@ const Home = () => {
         <Spotlight />
         {/* <HeroSection /> */}
         <ServicesSection />
-        <LogoSlider />
         <ArchitectureProcess />
         <TailoredServices />
+        <LogoSlider />
         {/* <FinishingSolutions /> */}
         {/* <ProductShowcaseSection /> */}
         {/* <Testimonial /> */}

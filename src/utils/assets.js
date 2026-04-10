@@ -30,6 +30,9 @@ import woodenDoor from '../assets/images/wood-door.png';
 import interior1 from '../assets/images/interior1.png';
 import floor from '../assets/images/floor.png';
 import shades from '../assets/images/shades.jpg';
+import flooring_1 from '../assets/images/flooring-1.jpg';
+import wallpannel from '../assets/images/wallpannel.png';
+import door from '../assets/images/door.jpg';
 
 
 export const IMAGES = {
@@ -64,5 +67,8 @@ export const IMAGES = {
 foldingDoor,
 woodenDoor,
 floor,
-shades
+shades,
+flooring_1,
+wallpannel,
+door
 }
