@@ -17,7 +17,7 @@ const TailoredServices = () => {
 
   return (
     <section className="container mx-auto pt-24 px-4 bg-white font-sans">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="mx-auto">
         <div className="flex items-center justify-between mb-12">
           <h2 className="md:text-5xl text-3xl text-gray-800">Best Products</h2>
           <div className="hidden md:flex gap-2"></div>
