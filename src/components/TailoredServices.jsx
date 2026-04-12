@@ -74,7 +74,7 @@ const TailoredServices = () => {
                       {index + 1}
                     </span>
                     <Link
-                      to="/contact"
+                      to={`/products/${product?.slug}`}
                       style={{ transition: "all 0.3s ease" }}
                       className="p-2 bg-[#b22a2a] text-white border border-gray-200 hover:border-[#8B2323] hover:text-[#fff] hover:shadow-md"
                     >

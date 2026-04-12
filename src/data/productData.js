@@ -45,6 +45,7 @@ import mineralCeiling from "../assets/images/ceiling /Mineral Fibre & Fibreglass
 import woodenCeiling from "../assets/images/ceiling /Wooden Ceiling.jpg";
 import handle from "../assets/images/carpentry/Handle2.jpg";
 import hinges from "../assets/images/carpentry/Hinges 1.jpg";
+import carpentry_accessories from "../assets/images/carpentry/carpentry accesories cover.jpg";
 import lock from "../assets/images/carpentry/Lock door.jpg";
 import new_lock from "../assets/images/carpentry/lockss.jpg";
 import interior_decorative from "../assets/images/profile and accesories/interior decorative.jpeg";
@@ -53,15 +54,18 @@ import stair_step_nosing from "../assets/images/profile and accesories/stair ste
 import tile_finishing_profile from "../assets/images/profile and accesories/tile finishing profile1 .jpeg";
 import kitchen_cupboard from "../assets/images/kitchen & wardrob/Kitchen Cupboard.jpg";
 import wardrobe from "../assets/images/kitchen & wardrob/Wardrobe Accessories.jpg";
+import kitchen_wardrobe_cover from "../assets/images/kitchen & wardrob/kitchen & wardrobe cover.jpg";
 import profile from "../assets/images/kitchen & wardrob/Wardrobe Profile.jpg";
 import mdf_wood from "../assets/images/wooden/MDF and Chipboardd.jpg";
 import solid_wood from "../assets/images/wooden/wooden cover.jpg";
 import corian from "../assets/images/solid surfaces /corian.jpeg";
 import granite from "../assets/images/solid surfaces /granite.jpeg";
+import solid_surface_cover from "../assets/images/solid surfaces /Solid Surface cover.jpg";
 import marble from "../assets/images/solid surfaces /marble .jpeg";
 import quartz from "../assets/images/solid surfaces /quartz.jpeg";
 import blackout from "../assets/images/Curtains/Blackout BlindsWW.jpg";
 import curtainTrack from "../assets/images/Curtains/Curtain Track:Rail System.jpg";
+import pvcStripCurtain from "../assets/images/Curtains/PVC Strip Curtains.jpg";
 import luxuryCurtains from "../assets/images/Curtains/Luxury Curtains.jpg";
 import motorized from "../assets/images/Curtains/Motorized Blinds & Curtains22.jpg";
 import romanBlinds from "../assets/images/Curtains/Roman Blinds.jpg";
@@ -91,7 +95,7 @@ export const productData = [
     slug: "flooring",
     image: flooring,
     description:
-      "Stone Plastic Composite flooring - a rigid, waterproof flooring solution with enhanced durability",
+      "Stone Plastic Composite (SPC) flooring is a rigid, waterproof flooring solution known for its enhanced durability and stability. Similarly, Wood Plastic Composite (WPC) flooring offers a resilient, water-resistant option with a more comfortable feel underfoot and a natural wood-like appearance.",
     features: [
       "Waterproof and moisture-resistant",
       "Easy to clean and maintain",
@@ -490,7 +494,7 @@ export const productData = [
     slug: "carpentry-accessories",
     description:
       "The handle is the first physical interaction a person has with your furniture. Our accessory collection focuses on ergonomic weight and artisanal finishes that make every 'open and close' feel intentional.",
-    image: handle,
+    image: carpentry_accessories,
     categories: [
       {
         name: "Handles",
@@ -513,6 +517,7 @@ export const productData = [
     name: "Profile & Accessories",
     slug: "profile-accessories",
     image: interior_decorative,
+    description: `Eliminate the need for traditional bulky skirting and architraves. Our shadow gap profiles create a "floating" effect where walls meet floors and ceilings, adding a sense of weightless luxury to the room's geometry.`,
     categories: [
       {
         name: "Interior Decorative Profile & Moldings",
@@ -540,7 +545,7 @@ export const productData = [
     name: "Kitchen & Wardrobe",
     slug: "kitchen-wardrobe",
     description: `We treat the kitchen as a precision instrument. Our designs move away from cluttered cabinetry toward a "gallery" aesthetic, where appliances are hidden, and surfaces are continuous.`,
-    image: kitchen_cupboard,
+    image: kitchen_wardrobe_cover,
     categories: [
       {
         name: "Kitchen Cupboard",
@@ -577,7 +582,7 @@ export const productData = [
     name: "Solid Surface For Interior",
     slug: "solid-surface-for-interior",
     description: `Imagine a kitchen island where the countertop, sink, and backsplash are a single, uninterrupted piece of stone-like material.`,
-    image: corian,
+    image: solid_surface_cover,
     categories: [
       {
         name: "Corian",
@@ -650,7 +655,7 @@ export const productData = [
       {
         name: "PVC Strip Curtain",
         slug: "pvc-strip-curtain",
-        image: vertical,
+        image: pvcStripCurtain,
       },
     ],
   },

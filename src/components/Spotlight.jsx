@@ -116,7 +116,7 @@ const Spotlight = () => {
               <div className="absolute inset-0 bg-black/30" />
 
               <div className="absolute left-4 md:left-24 bottom-[120px] z-10 max-w-4xl px-6">
-                <h1 className="text-white text-3xl md:text-5xl font-bold uppercase leading-[1.1em] mt-4">
+                <h1 className="text-white text-3xl md:text-5xl font-bold leading-[1.1em] mt-4">
                   {slide.title.map((line, idx) => (
                     <span key={idx} className="block overflow-hidden">
                       <span className="title-line block text-[#fff]">
