@@ -43,7 +43,7 @@ import acousticCeiling from "../assets/images/ceiling /Acoustic Ceiling w.jpg";
 import aluminiumCeiling from "../assets/images/ceiling /aluminium ceiling design.jpg";
 import mineralCeiling from "../assets/images/ceiling /Mineral Fibre & Fibreglass Ceiling.jpg";
 import woodenCeiling from "../assets/images/ceiling /Wooden Ceiling.jpg";
-import handle from "../assets/images/carpentry/handle2.jpg";
+import handle from "../assets/images/carpentry/Handle2.jpg";
 import hinges from "../assets/images/carpentry/Hinges 1.jpg";
 import lock from "../assets/images/carpentry/Lock door.jpg";
 import new_lock from "../assets/images/carpentry/lockss.jpg";
