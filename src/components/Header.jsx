@@ -10,9 +10,8 @@ import { IMAGES } from "../utils/assets";
 import { Link, useNavigate } from "react-router-dom";
 
 const megaMenuItems = [
-  ["Flooring", "Wall Paneling & Cladding", "Doors", "Windows", "Partitions", "Ceiling", "Carpentry"],
-  ["Profile & Accessories", "Kitchen & Wardrobe", "Lock and Handles", "Wood", "Solid Surface"],
-  ["Aluminum", "Stainless Steel", "UPVC", "WPC", "Curtain and Blinds", "Shades and Fabric"],
+  ["Flooring", "Wall Panels", "Doors", "Windows", "Partitions", "Ceiling Solutions", "Carpentry Accessories"],
+  ["Profile & Accessories", "Kitchen & Wardrobe", "Wood Materials", "Solid Surface for Interior", "Curtain and Blinds", "Shades", "Fencing"],
 ];
 
 const Header = () => {
@@ -84,7 +83,7 @@ const Header = () => {
             </button>
 
             {isMegaMenuOpen && (
-              <div className="absolute left-1/2 top-full w-[80vw] max-w-3xl bg-white shadow-2xl border border-gray-100 p-10 grid grid-cols-3 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
+              <div className="absolute left-1/2 top-full w-[80vw] max-w-2xl bg-white shadow-2xl border border-gray-100 p-10 grid grid-cols-2 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
                 {megaMenuItems.map((column, colIdx) => (
                   <ul key={colIdx} className="space-y-3">
                     {column.map((item, i) => (

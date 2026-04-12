@@ -43,7 +43,7 @@ import acousticCeiling from "../assets/images/ceiling /Acoustic Ceiling w.jpg";
 import aluminiumCeiling from "../assets/images/ceiling /aluminium ceiling design.jpg";
 import mineralCeiling from "../assets/images/ceiling /Mineral Fibre & Fibreglass Ceiling.jpg";
 import woodenCeiling from "../assets/images/ceiling /Wooden Ceiling.jpg";
-import handle from "../assets/images/carpentry/handle 3.jpg";
+import handle from "../assets/images/carpentry/handle2.jpg";
 import hinges from "../assets/images/carpentry/Hinges 1.jpg";
 import lock from "../assets/images/carpentry/Lock door.jpg";
 import new_lock from "../assets/images/carpentry/lockss.jpg";
@@ -72,6 +72,18 @@ import vertical from "../assets/images/Curtains/Vertical Blinds.webp";
 import hdpe from "../assets/images/shades/HDPE.jpeg";
 import kwikSpan from "../assets/images/shades/Kwik Span Shades.jpg";
 import modernPergola from "../assets/images/shades/Modern Pergolaa.jpg";
+import doorCover from "../assets/images/door/door-cover.jpg";
+import wallPanelCover from "../assets/images/wall panels/wall panel cover.jpg";
+import windowsCover from "../assets/images/windows/windows cover .jpg";
+import partitionCover from "../assets/images/partition/partition cover.jpg";
+import pvcGypsumCeiling from "../assets/images/ceiling /60×60 Pre Gypsum Ceiling2.jpg";
+import ceilingCover from "../assets/images/ceiling /ceiling cover.jpeg";
+import wpcFencing from "../assets/images/fencing/WPC Fencing.jpg";
+import pvcCoatedChainLinkFencing from "../assets/images/fencing/PVC Coated Chain Link Fencing.jpg";
+import pvcFencing from "../assets/images/fencing/PVC Fencing.jpg";
+// import handleCover from "../assets/images/carpentry/Handle cover.jpg";
+
+import solidWoodenFlooring from "../assets/images/floooring/Solid Wooden Flooring  .jpg";
 
 export const productData = [
   {
@@ -106,15 +118,15 @@ export const productData = [
 
     categories: [
       {
-        name: "Indoor",
-        slug: "indoor",
+        name: "Indoor Flooring",
+        slug: "flooring",
         description:
           "Stone Plastic Composite flooring - a rigid, waterproof flooring solution with enhanced durability",
-        image: marbleFloor,
+        image: flooring,
         categories: [
           {
-            name: "Carpet Tile",
-            slug: "carpet-tile",
+            name: "Carpet Tiles & Rolls",
+            slug: "carpet-tiles-rolls",
             image: carpetTile,
             thickness: "1.5mm - 12mm",
             wearLayer: "30 years",
@@ -177,41 +189,12 @@ export const productData = [
             warranty: "10 years",
           },
           {
-            name: "Terrazzo Flooring",
-            slug: "terrazzo-flooring",
+            name: "Floor & Walltiles",
+            slug: "floor-walltiles",
             image: terrazo,
             thickness: "1.5mm - 12mm",
             wearLayer: "30 years",
             warranty: "10 years",
-          },
-        ],
-      },
-      {
-        name: "System Flooring",
-        slug: "system-flooring",
-        image: modularFlooring,
-        categories: [
-          {
-            name: "Modular Access / Raised Flooring",
-            slug: "raised-flooring",
-            image: modularFlooring,
-          },
-          {
-            name: "Industrial / Epoxy Flooring",
-            slug: "epoxy-flooring",
-            image: industrialFlooring,
-          },
-        ],
-      },
-      {
-        name: "Outdoor",
-        slug: "outdoor",
-        image: landscaping,
-        categories: [
-          {
-            name: "Landscaping",
-            slug: "landscaping",
-            image: landscaping,
           },
           {
             name: "WPC Decking",
@@ -219,16 +202,36 @@ export const productData = [
             image: wpcDecking,
           },
           {
+            name: "Solid Wooden Flooring",
+            slug: "solid-wooden-flooring",
+            image: solidWoodenFlooring,
+          },
+          {
             name: "Artificial Grass",
             slug: "artificial-grass",
             image: artificialGrass,
           },
+          {
+            name: "Modular Access / Raised Flooring",
+            slug: "modular-access-raised-flooring",
+            image: modularFlooring,
+          },
+          {
+            name: "Marble Flooring & Cladding",
+            slug: "marble-flooring-cladding",
+            image: marbleFloor,
+          },
+          {
+            name: "Industrial / Epoxy Flooring",
+            slug: "industrial-epoxy-flooring",
+            image: industrialFlooring,
+          },
         ],
       },
       {
-        name: "Sports Flooring",
-        slug: "sports-flooring",
-        image: sports,
+        name: "Sports Infrastructure",
+        slug: "sports-infrastructure",
+        image: football,
         categories: [
           {
             name: "Football Court Flooring",
@@ -252,13 +255,28 @@ export const productData = [
           },
         ],
       },
+
+      {
+        name: "Landscape Design & Developement",
+        slug: "landscape-design-developement",
+        image: landscaping,
+        categories: [
+          {
+            name: "Landscaping",
+            slug: "landscaping",
+            image: landscaping,
+          },
+        ],
+      },
     ],
   },
 
   {
-    name: "Wall Paneling & Cladding",
-    slug: "wall-paneling-cladding",
-    image: solidWood,
+    name: "Wall Panels",
+    slug: "wall-panels",
+    description:
+      "Elevate your space with surfaces that do more than just sit there. Our custom wall paneling collection focuses on the interplay of light and shadow.",
+    image: wallPanelCover,
     features: [
       "Waterproof and moisture-resistant",
       "Easy to clean and maintain",
@@ -301,15 +319,15 @@ export const productData = [
         warranty: "10 years",
       },
       {
-        name: "WPC Panel",
-        slug: "wpc-panel",
+        name: "WPC Outdoor Panel",
+        slug: "wpc-outdoor-panel",
         thickness: "1.5mm - 12mm",
         wearLayer: "30 years",
         warranty: "10 years",
         image: wpcOutdoorPanels,
       },
       {
-        name: "MDF Panel",
+        name: "MDF & Wooden Wall Panel",
         slug: "mdf-panel",
         thickness: "1.5mm - 12mm",
         wearLayer: "30 years",
@@ -317,7 +335,7 @@ export const productData = [
         image: mdf,
       },
       {
-        name: "HPL Cladding",
+        name: "HPL Wooden Panel",
         slug: "hpl-cladding",
         thickness: "1.5mm - 12mm",
         wearLayer: "30 years",
@@ -333,8 +351,8 @@ export const productData = [
         image: uv,
       },
       {
-        name: "ACP Outdoor Cladding",
-        slug: "acp-cladding",
+        name: "WPC Wall Panel",
+        slug: "wpc-wall-panel",
         thickness: "1.5mm - 12mm",
         wearLayer: "30 years",
         warranty: "10 years",
@@ -348,13 +366,24 @@ export const productData = [
         warranty: "10 years",
         image: wallFinishes,
       },
+      {
+        name: "Solid Wooden Panel",
+        slug: "solid-wooden-panel",
+        thickness: "1.5mm - 12mm",
+        wearLayer: "30 years",
+        warranty: "10 years",
+        image: solidWood,
+      },
     ],
   },
 
   {
     name: "Doors",
     slug: "doors",
-    image: doors,
+    description:
+      "Redefine the transition between spaces. Our signature pivot doors eliminate bulky frames in favor of a monolithic, architectural look that feels like a moving part of the wall itself.",
+
+    image: doorCover,
     categories: [
       {
         name: "Aluminium Door",
@@ -376,18 +405,15 @@ export const productData = [
         slug: "upvc-door",
         image: upvcDoor,
       },
-      {
-        name: "Steel Door",
-        slug: "steel-door",
-        image: steelDoor,
-      },
     ],
   },
 
   {
     name: "Windows",
     slug: "windows",
-    image: aluminiumWindow,
+    description:
+      "Eliminate the boundary between inside and out. Our Horizon windows feature ultra-slim profiles that maximize your glass to wall ratio, turning every window into a living piece of art.",
+    image: windowsCover,
     categories: [
       {
         name: "Aluminium Window",
@@ -404,7 +430,9 @@ export const productData = [
   {
     name: "partitions",
     slug: "partitions",
-    image: partitions,
+    description:
+      "Maintain the visual scale of your floor plan while creating functional zones. Our glass partitions use high-clarity glazing to define spaces without blocking light or sightlines.",
+    image: partitionCover,
     categories: [
       {
         name: "Aluminium Partitions",
@@ -424,9 +452,11 @@ export const productData = [
     ],
   },
   {
-    name: "Ceiling",
-    slug: "ceiling",
-    image: acousticCeiling,
+    name: "Ceiling Solutions",
+    slug: "ceiling-solutions",
+    description:
+      "Bring the ceiling into the design conversation. Our modular 3D panels move away from flat surfaces to create a rhythmic, geometric landscape overhead.",
+    image: ceilingCover,
     categories: [
       {
         name: "Acoustic Ceiling",
@@ -448,11 +478,18 @@ export const productData = [
         slug: "wooden-ceiling",
         image: woodenCeiling,
       },
+      {
+        name: "60x60 PVC Gypsum Ceiling",
+        slug: "60x60-pvc-gypsum-ceiling",
+        image: pvcGypsumCeiling,
+      },
     ],
   },
   {
-    name: "Carpentry",
-    slug: "carpentry",
+    name: "Carpentry Accessories",
+    slug: "carpentry-accessories",
+    description:
+      "The handle is the first physical interaction a person has with your furniture. Our accessory collection focuses on ergonomic weight and artisanal finishes that make every 'open and close' feel intentional.",
     image: handle,
     categories: [
       {
@@ -470,11 +507,6 @@ export const productData = [
         slug: "locks",
         image: lock,
       },
-      {
-        name: "New Locks",
-        slug: "new-locks",
-        image: new_lock,
-      },
     ],
   },
   {
@@ -483,7 +515,7 @@ export const productData = [
     image: interior_decorative,
     categories: [
       {
-        name: "Interior Decorative",
+        name: "Interior Decorative Profile & Moldings",
         slug: "interior-decorative",
         image: interior_decorative,
       },
@@ -493,7 +525,7 @@ export const productData = [
         image: skirting_profile,
       },
       {
-        name: "Stair Step Nosing",
+        name: "Stair Step Nosing & Safety Profile",
         slug: "stair-step-nosing",
         image: stair_step_nosing,
       },
@@ -507,6 +539,7 @@ export const productData = [
   {
     name: "Kitchen & Wardrobe",
     slug: "kitchen-wardrobe",
+    description: `We treat the kitchen as a precision instrument. Our designs move away from cluttered cabinetry toward a "gallery" aesthetic, where appliances are hidden, and surfaces are continuous.`,
     image: kitchen_cupboard,
     categories: [
       {
@@ -526,48 +559,24 @@ export const productData = [
       },
     ],
   },
+
   {
-    name: "lock & handles",
-    slug: "lock-and-handles",
-    image: lock,
-    categories: [
-      {
-        name: "Handles",
-        slug: "handles",
-        image: handle,
-      },
-      {
-        name: "lock",
-        slug: "lock",
-        image: lock,
-      },
-      {
-        name: "new lock",
-        slug: "new-lock",
-        image: new_lock,
-      },
-    ],
-  },
-  {
-    name: "Wood",
-    slug: "wood",
+    name: "Wood Materials",
+    slug: "wood-materials",
+    description: `Our selection of solid hardwoods is curated for those who appreciate the slow growth and deep character of natural timber.`,
     image: mdf_wood,
     categories: [
       {
-        name: "MDF and Chipboard",
+        name: "MDF, HPL and Chipboard",
         slug: "mdf-and-chipboard",
         image: mdf_wood,
-      },
-      {
-        name: "Solid Wood",
-        slug: "solid-wood",
-        image: solid_wood,
       },
     ],
   },
   {
-    name: "Solid Surface",
-    slug: "solid-surface",
+    name: "Solid Surface For Interior",
+    slug: "solid-surface-for-interior",
+    description: `Imagine a kitchen island where the countertop, sink, and backsplash are a single, uninterrupted piece of stone-like material.`,
     image: corian,
     categories: [
       {
@@ -595,6 +604,7 @@ export const productData = [
   {
     name: "Curtain & Blinds",
     slug: "curtain-and-blinds",
+    description: `Transform your windows into a soft-focus backdrop. Our drapery collection focuses on the "drop"—the way fabric falls and pools on the floor—to create a sense of height and quiet luxury.`,
     image: blackout,
     categories: [
       {
@@ -623,11 +633,6 @@ export const productData = [
         image: romanBlinds,
       },
       {
-        name: "Shades and Fabric",
-        slug: "shades-and-fabric",
-        image: sasa,
-      },
-      {
         name: "Sunscreen Blinds",
         slug: "sunscreen-blinds",
         image: sunscreen,
@@ -642,11 +647,17 @@ export const productData = [
         slug: "vertical-blinds",
         image: vertical,
       },
+      {
+        name: "PVC Strip Curtain",
+        slug: "pvc-strip-curtain",
+        image: vertical,
+      },
     ],
   },
   {
-    name: "shades & fabric",
-    slug: "shades-and-fabric",
+    name: "Shades",
+    slug: "shades",
+    description: `Control the climate without losing the horizon. Our solar shades act as a "liquid" filter for your windows, cutting down 99% of UV rays and glare while preserving your view of the city.`,
     image: hdpe,
     categories: [
       {
@@ -663,6 +674,29 @@ export const productData = [
         name: "Modern Pergola",
         slug: "modern-pergola",
         image: modernPergola,
+      },
+    ],
+  },
+  {
+    name: "Fencing",
+    slug: "fencing",
+    description: `Bring the warmth of wood to your exterior without the warping or maintenance of traditional timber. `,
+    image: wpcFencing,
+    categories: [
+      {
+        name: "WPC Fencing",
+        slug: "wpc-fencing",
+        image: wpcFencing,
+      },
+      {
+        name: "PVC Fencing",
+        slug: "pvc-fencing",
+        image: pvcFencing,
+      },
+      {
+        name: "PVC Coated Chain Link Fencing",
+        slug: "pvc-coated-chain-link-fencing",
+        image: pvcCoatedChainLinkFencing,
       },
     ],
   },

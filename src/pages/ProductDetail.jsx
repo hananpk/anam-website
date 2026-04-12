@@ -11,7 +11,8 @@ const ProductDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    setActiveSubproduct(null)
+  }, [slug]);
 
   if (!product) {
     return (
@@ -46,7 +47,7 @@ const ProductDetail = () => {
                 ← Back to Categories
               </button>
             )}
-            <h1 className="text-white text-5xl md:text-7xl font-bold uppercase">
+            <h1 className="text-white text-5xl md:text-7xl font-bold ">
               {activeSubproduct ? activeSubproduct.name : product.name}
             </h1>
             <p className="text-white text-lg max-w-2xl mt-2">
