@@ -13,28 +13,28 @@ import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 const slides = [
   {
-    image: IMAGES.flooring_1,
+    image: IMAGES.LP2,
     title: ["Premium", "Flooring Solutions"],
     subtitle: "Durability Meets Style",
     desc: "Upgrade your interiors with premium SPC flooring that combines durability, water resistance, and modern aesthetics for long-lasting elegant spaces.",
     cta: "Explore Flooring",
   },
   {
-    image: IMAGES.foldingDoor,
+    image: IMAGES.LP3,
     title: ["Elegant", "Aluminium Partitions"],
     subtitle: "Transform Your Walls",
     desc: "Create stylish and functional spaces with our sleek aluminium partitions designed for flexibility, durability, and modern interior aesthetics.",
     cta: "View Wallpapers",
   },
   {
-    image: IMAGES.door,
+    image: IMAGES.LP1,
     title: ["Modern & Secure", "Door Collection"],
     subtitle: "Security & Aesthetics",
     desc: "Explore our premium door collection crafted for superior security, durability, and contemporary design that complements any interior.",
     cta: "Browse Doors",
   },
   {
-    image: IMAGES.wallpannel,
+    image: IMAGES.LP4,
     title: ["Minimalist", "Wall Panels"],
     subtitle: "Bring Minimalism",
     desc: "Enhance your walls with elegant minimalist wall panels that add depth, texture, and a refined modern look to your interiors.",
