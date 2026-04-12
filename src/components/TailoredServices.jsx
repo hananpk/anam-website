@@ -20,7 +20,6 @@ const TailoredServices = () => {
       <div className="mx-auto">
         <div className="flex items-center justify-between mb-12">
           <h2 className="md:text-5xl text-3xl text-gray-800">Best Products</h2>
-          <div className="hidden md:flex gap-2"></div>
         </div>
 
         <Swiper
