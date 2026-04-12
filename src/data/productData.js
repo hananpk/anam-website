@@ -64,6 +64,7 @@ import solid_surface_cover from "../assets/images/solid surfaces /Solid Surface 
 import marble from "../assets/images/solid surfaces /marble .jpeg";
 import quartz from "../assets/images/solid surfaces /quartz.jpeg";
 import blackout from "../assets/images/Curtains/Blackout BlindsWW.jpg";
+import curtain_cover from "../assets/images/Curtains/curtain cover.png";
 import curtainTrack from "../assets/images/Curtains/Curtain Track:Rail System.jpg";
 import pvcStripCurtain from "../assets/images/Curtains/PVC Strip Curtains.jpg";
 import luxuryCurtains from "../assets/images/Curtains/Luxury Curtains.jpg";
@@ -85,6 +86,7 @@ import ceilingCover from "../assets/images/ceiling /ceiling cover.jpeg";
 import wpcFencing from "../assets/images/fencing/WPC Fencing.jpg";
 import pvcCoatedChainLinkFencing from "../assets/images/fencing/PVC Coated Chain Link Fencing.jpg";
 import pvcFencing from "../assets/images/fencing/PVC Fencing.jpg";
+import profile_cover from "../assets/images/tile profile cover.png";
 // import handleCover from "../assets/images/carpentry/Handle cover.jpg";
 
 import solidWoodenFlooring from "../assets/images/floooring/Solid Wooden Flooring  .jpg";
@@ -516,7 +518,7 @@ export const productData = [
   {
     name: "Profile & Accessories",
     slug: "profile-accessories",
-    image: interior_decorative,
+    image: profile_cover,
     description: `Eliminate the need for traditional bulky skirting and architraves. Our shadow gap profiles create a "floating" effect where walls meet floors and ceilings, adding a sense of weightless luxury to the room's geometry.`,
     categories: [
       {
@@ -610,7 +612,7 @@ export const productData = [
     name: "Curtain & Blinds",
     slug: "curtain-and-blinds",
     description: `Transform your windows into a soft-focus backdrop. Our drapery collection focuses on the "drop"—the way fabric falls and pools on the floor—to create a sense of height and quiet luxury.`,
-    image: blackout,
+    image: curtain_cover,
     categories: [
       {
         name: "Blackout Blinds",
