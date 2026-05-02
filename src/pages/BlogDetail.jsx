@@ -19,7 +19,7 @@ const BlogDetail = () => {
     <Layout withBg={true}>
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 py-10">
-          <span className="inline-block mb-4 text-xs uppercase font-bold tracking-widest text-[#b22a2a]">
+          <span className="inline-block mb-4 text-xs uppercase font-bold tracking-widest text-primary">
             {blog.category}
           </span>
 

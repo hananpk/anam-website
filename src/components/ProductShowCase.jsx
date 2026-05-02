@@ -64,7 +64,7 @@ const ProductShowcaseSection = () => {
                   item.reverse ? "right-8" : "left-8"
                 } text-white max-w-sm mb-8`}
               >
-                <h3 className="text-3xl text-[#b22a2a] font-bold">
+                <h3 className="text-3xl text-primary font-bold">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[#333] leading-relaxed">{item.desc}</p>
@@ -73,7 +73,7 @@ const ProductShowcaseSection = () => {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-700">
                 {item.apps.map((app, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#b22a2a]" />
+                    <span className="w-2 h-2 rounded-full bg-primary" />
                     <span>{app}</span>
                   </div>
                 ))}

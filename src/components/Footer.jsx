@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#b22a2a] text-white pt-24 overflow-hidden pb-10">
+    <footer className="relative bg-primary text-white pt-24 overflow-hidden pb-10">
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute inset-0 bg-black/40" />
       </div>
@@ -83,7 +83,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="bg-white/10 p-3 rounded-full hover:bg-white hover:text-[#b22a2a] transition-all duration-300 transform hover:-translate-y-1"
+                  className="bg-white/10 p-3 rounded-full hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1"
                 >
                   {React.cloneElement(social.icon, { size: 18 })}
                 </a>

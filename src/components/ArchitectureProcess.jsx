@@ -36,7 +36,7 @@ const PROCESS_STEPS = [
 const ArchitectureProcess = () => {
   return (
     <section
-      className="py-24 bg-[#f8f8f8] overflow-hidden bg-no-repeat bg-contain bg-bottom"
+      className="py-24 overflow-hidden bg-no-repeat bg-contain bg-bottom"
       style={{
         backgroundImage:
           "url(https://demo2.themelexus.com/antra/wp-content/uploads/2025/06/h1-bg02.png)",
@@ -83,7 +83,7 @@ const ArchitectureProcess = () => {
 
               <div className="relative">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-[#b22a2a] font-bold text-lg">
+                  <span className="text-primary font-bold text-lg">
                     {step.id}.
                   </span>
                   <h3 className="font-bold text-xl text-gray-900">
@@ -94,7 +94,7 @@ const ArchitectureProcess = () => {
                   {step.description}
                 </p>
 
-                <span className="text-right block w-full bottom-0 right-4 text-7xl font-bold text-gray-100 group-hover:text-red-50 transition-colors pointer-events-none">
+                <span className="text-right block w-full bottom-0 right-4 text-7xl font-bold text-gray-100 group-hover:text-[#ead8df] transition-colors pointer-events-none">
                   {step.id}
                 </span>
               </div>

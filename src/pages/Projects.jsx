@@ -19,7 +19,7 @@ const ProjectsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-6xl font-bold tracking-tighter text-[#1a1a1a] mb-4">
-              Our <span className="text-[#b22a2a]">Projects</span>
+              Our <span className="text-primary">Projects</span>
             </h1>
             <p className="text-gray-500 max-w-xl mx-auto">
               Discover our diverse portfolio ranging from bespoke interior
@@ -35,8 +35,8 @@ const ProjectsPage = () => {
                 className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 border-2
                 ${
                   activeTab === cat
-                    ? "bg-[#b22a2a] border-[#b22a2a] text-white shadow-lg"
-                    : "bg-transparent border-gray-200 text-gray-400 hover:border-[#b22a2a] hover:text-[#b22a2a]"
+                    ? "bg-primary border-primary text-white shadow-lg"
+                    : "bg-transparent border-gray-200 text-gray-400 hover:border-primary hover:text-primary"
                 }`}
               >
                 {cat}

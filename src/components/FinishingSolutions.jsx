@@ -73,7 +73,7 @@ const ProductCard = ({ product }) => {
 
 const FinishingSolutions = () => {
   return (
-    <section className="bg-[#b22a2a] text-white flex items-center py-20 overflow-hidden">
+    <section className="bg-primary text-white flex items-center py-20 overflow-hidden">
       <div className="max-w-[1400px] px-12 items-center flex">
         {/* Left Side: STATIC TEXT with Reveal Animation */}
         <motion.div
@@ -99,13 +99,13 @@ const FinishingSolutions = () => {
           <div className="flex gap-4 pt-4">
             <button
               id="p-prev"
-              className="w-14 h-14 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#b22a2a] transition-all z-30"
+              className="w-14 h-14 border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all z-30"
             >
               <LuChevronLeft size={24} />
             </button>
             <button
               id="p-next"
-              className="w-14 h-14 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#b22a2a] transition-all z-30"
+              className="w-14 h-14 border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all z-30"
             >
               <LuChevronRight size={24} />
             </button>

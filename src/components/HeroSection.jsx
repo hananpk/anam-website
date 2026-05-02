@@ -77,7 +77,7 @@ const HeroSection = () => {
         {/* Left Side: STATIC CONTENT (No changes here) */}
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 ">
-            <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
             <span className="text-xs font-medium uppercase tracking-widest text-gray-900">
               Started In 1999
             </span>
@@ -85,7 +85,7 @@ const HeroSection = () => {
 
           <h1 className="text-5xl md:text-6xl lg:text-5xl text-black font-bold leading-[1.1] tracking-tight">
             Where Spaces <br /> Inspire, and{" "}
-            <span className="text-[#e13b3b]">
+            <span className="text-primary">
               Design <br /> Comes Alive
             </span>
           </h1>
@@ -105,7 +105,7 @@ const HeroSection = () => {
           </div>
 
           <Link to={"/about"}>
-            <button className="px-8 py-4 border border-black text-black hover:border-transparent rounded-full font-semibold hover:bg-red-900 hover:text-white flex items-center transition-all duration-300 group">
+            <button className="px-8 py-4 border border-black text-black hover:border-transparent rounded-full font-semibold hover:bg-primary hover:text-white flex items-center transition-all duration-300 group">
               Know More{" "}
               <span className="block ml-2 group-hover:translate-x-1 transition-transform">
                 <LuArrowRight />
@@ -120,14 +120,14 @@ const HeroSection = () => {
         >
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/40 border border-white/10 hover:bg-red-800 transition-all opacity-0 group-hover:opacity-100"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/40 border border-white/10 hover:bg-primary transition-all opacity-0 group-hover:opacity-100"
           >
             <LuChevronLeft size={24} />
           </button>
 
           <button
             onClick={() => paginate(1)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/40 border border-white/10 hover:bg-red-800 transition-all opacity-0 group-hover:opacity-100"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/40 border border-white/10 hover:bg-primary transition-all opacity-0 group-hover:opacity-100"
           >
             <LuChevronRight size={24} />
           </button>

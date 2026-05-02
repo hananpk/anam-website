@@ -9,6 +9,8 @@ import ProductDetail from "./pages/ProductDetail";
 import ContactUs from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import WhatsAppButton from "./components/WhatsappButton";
+import CareerPage from "./pages/Careers";
+import BlogSection from "./components/BlogSection";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/blog" element={<BlogSection />} />
+        <Route path="/careers" element={<CareerPage />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/products/:slug" element={<ProductDetail />} />
         <Route path="/products/:slug/:subslug" element={<ProductDetail />} />

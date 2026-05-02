@@ -6,7 +6,7 @@ import MasonryGallery from "../components/MasanoryGallery";
 const AboutSection = () => {
   return (
     <Layout withBg>
-      <div className="bg-[#fff] text-[#1a1a1a] font-sans pt-10">
+      <div className="text-[#1a1a1a] font-sans pt-10">
         {/* Hero Banner */}
         <div className="relative h-[200px] md:h-[440px] w-full flex items-center justify-center overflow-hidden">
           <img

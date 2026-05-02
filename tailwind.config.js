@@ -2,14 +2,14 @@
 import typography from "@tailwindcss/typography";
 
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-        fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+      fontFamily: {
+        sans: ["Montserrat", "sans-serif"],
+      },
+      colors: {
+        primary: "var(--primary-color)",
       },
     },
   },

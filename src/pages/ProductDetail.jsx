@@ -26,10 +26,10 @@ const ProductDetail = () => {
 
   return (
     <Layout withBg>
-      <main className="pt-10">
+      <main>
         {/* Hero Section */}
         <section
-          className="relative h-[40vh] flex items-center px-10 bg-cover bg-center bg-gray-900"
+          className="relative h-[45vh] flex items-center px-10 bg-cover bg-center bg-gray-900"
           style={{
             backgroundImage: `url(${activeSubproduct?.image ||
               product.image ||
@@ -42,7 +42,7 @@ const ProductDetail = () => {
             {activeSubproduct && (
               <button
                 onClick={() => setActiveSubproduct(null)}
-                className="mb-6 text-sm font-bold text-[#ff443a] cursor-pointer"
+                className="mb-6 text-sm font-bold text-primary cursor-pointer"
               >
                 ← Back to Categories
               </button>
@@ -114,14 +114,14 @@ const ProductDetail = () => {
 
             {/* CTA */}
             <div className="flex justify-center">
-              <button className="mt-10 bg-[#b22a2a] text-white px-10 py-4 font-bold hover:bg-black transition uppercase text-sm tracking-widest shadow-lg">
+              <button className="mt-10 bg-primary text-white px-10 py-4 font-bold hover:bg-black transition uppercase text-sm tracking-widest shadow-lg">
                 Request a Quote ↗
               </button>
             </div>
           </div>
         </section>
         {data?.applications && (
-          <section className="bg-[#b22a2a] py-16 px-6 text-white">
+          <section className="bg-primary py-16 px-6 text-white">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="w-1/2">
                 <h2 className="text-3xl font-bold uppercase tracking-tighter">
@@ -157,7 +157,7 @@ const ProductDetail = () => {
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Features List */}
-                <div className="bg-white p-10 border-t-4 border-[#b22a2a] shadow-sm">
+                <div className="bg-white p-10 border-t-4 border-primary shadow-sm">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900 uppercase tracking-tight">
                     Key Features
                   </h3>
@@ -167,7 +167,7 @@ const ProductDetail = () => {
                         key={i}
                         className="flex items-center gap-3 text-gray-700"
                       >
-                        <span className="w-2 h-2 bg-[#b22a2a] shrink-0" />
+                        <span className="w-2 h-2 bg-primary shrink-0" />
                         {feat}
                       </li>
                     ))}

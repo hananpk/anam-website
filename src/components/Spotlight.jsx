@@ -131,7 +131,7 @@ const Spotlight = () => {
                 </p>
 
                 {/* <div className="mt-10 flex justify-start gap-4">
-                  <button className="px-8 py-4 bg-white text-black font-semibold hover:bg-red-900 hover:text-white transition-colors duration-300">
+                  <button className="px-8 py-4 bg-white text-black font-semibold hover:bg-primary hover:text-white transition-colors duration-300">
                     {slide.cta}
                   </button>
                 </div> */}

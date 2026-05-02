@@ -12,11 +12,11 @@ import "swiper/css/pagination";
 import { productData } from "../data/productData";
 
 const TailoredServices = () => {
-  const brandColor = "#8B2323";
+  const brandColor = "#4B0B22";
   const products = productData;
 
   return (
-    <section className="container mx-auto pt-24 px-4 bg-white font-sans">
+    <section className="container mx-auto pt-24 px-4">
       <div className="mx-auto">
         <div className="flex items-center justify-between mb-12">
           <h2 className="md:text-5xl text-3xl text-gray-800">Best Products</h2>
@@ -54,11 +54,11 @@ const TailoredServices = () => {
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-[#8B2323]/0 group-hover:bg-[#8B2323]/10 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
 
                 <div className="p-6 bg-gray-50 flex flex-col flex-grow">
-                  <h5 className="text-sm mb-4 font-bold text-[#b22a2a] leading-tight uppercase tracking-wider">
+                  <h5 className="text-sm mb-4 font-bold text-primary leading-tight uppercase tracking-wider">
                     {product?.name}
                   </h5>
 
@@ -75,7 +75,7 @@ const TailoredServices = () => {
                     <Link
                       to={`/products/${product?.slug}`}
                       style={{ transition: "all 0.3s ease" }}
-                      className="p-2 bg-[#b22a2a] text-white border border-gray-200 hover:border-[#8B2323] hover:text-[#fff] hover:shadow-md"
+                      className="p-2 bg-primary text-white border border-gray-200 hover:border-primary hover:text-[#fff] hover:shadow-md"
                     >
                       <LuArrowRight size={18} />
                     </Link>
@@ -90,11 +90,11 @@ const TailoredServices = () => {
       <style jsx global>{`
         .swiper-button-next,
         .swiper-button-prev {
-          color: #8b2323 !important;
+          color: ${brandColor} !important;
           transform: scale(0.7);
         }
         .swiper-pagination-bullet-active {
-          background: #8b2323 !important;
+          background: ${brandColor} !important;
         }
         .swiper-pagination {
           position: absolute;

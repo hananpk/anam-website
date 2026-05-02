@@ -94,7 +94,7 @@ const ContactUs = () => {
               </div>
 
               <div className="flex justify-end pt-4">
-                <button className="px-8 py-4 bg-red-900 text-white font-semibold hover:bg-red-900  flex items-center hover:text-white transition-colors duration-300">
+                <button className="px-8 py-4 bg-primary text-white font-semibold hover:bg-primary flex items-center hover:text-white transition-colors duration-300">
                   Submit
                   <span className="block ml-2">
                     <LuArrowRight />
