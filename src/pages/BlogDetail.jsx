@@ -29,11 +29,7 @@ const BlogDetail = () => {
 
           <p className="text-gray-500 mb-10 font-medium">By {blog.author}</p>
 
-          <img
-            src={blog.image}
-            alt={blog.title}
-            className="w-full rounded-3xl mb-12"
-          />
+          <img src={blog.image} alt={blog.title} className="w-full mb-12" />
 
           <article
             className="

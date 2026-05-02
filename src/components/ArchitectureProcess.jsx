@@ -36,7 +36,7 @@ const PROCESS_STEPS = [
 const ArchitectureProcess = () => {
   return (
     <section
-      className="py-24 overflow-hidden bg-no-repeat bg-contain bg-bottom"
+      className="pt-10 overflow-hidden bg-no-repeat bg-contain bg-bottom"
       style={{
         backgroundImage:
           "url(https://demo2.themelexus.com/antra/wp-content/uploads/2025/06/h1-bg02.png)",

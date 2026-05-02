@@ -28,7 +28,7 @@ const BlogSection = () => {
       <section id="blogs" className="py-24 bg-white overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-12">
           {/* Section Header */}
-          <div className="text-center mb-20">
+          <div className="mb-20">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

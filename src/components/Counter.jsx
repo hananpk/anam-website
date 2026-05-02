@@ -9,10 +9,10 @@ const Counter = () => {
   const sectionRef = useRef(null);
 
   const stats = [
-    { value: "1000+", label: "Customers served" },
-    { value: "98%", label: "Customers recommend us" },
+    { value: "860+", label: "Customers served" },
+    { value: "10+", label: "Years of Experience" },
     { value: "4.8/5", label: "Customer Satisfaction Score" },
-    { value: "50+", label: "Cities" },
+    { value: "156+", label: "Completed Projects" },
   ];
 
   const getNumberAndSymbol = (value) => {
@@ -75,16 +75,16 @@ const Counter = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="overflow-hidden mt-10">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+    <section ref={sectionRef} className="overflow-hidden pb-10">
+      <div className=" mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center bg-[#8B1743]/10 ">
           {stats.map((item, i) => (
             <div
               key={i}
-              className="stat-card space-y-2  py-10 px-6 rounded-3xl"
+              className="stat-card space-y-2  py-10 px-6 border-r border-gray-100 last:border-0"
             >
               <div
-                className="count-up text-4xl md:text-5xl font-bold text-primary tracking-tight"
+                className="count-up text-4xl md:text-5xl font-bold text-primary tracking-tight font-sans"
                 data-target={item.value}
               >
                 0

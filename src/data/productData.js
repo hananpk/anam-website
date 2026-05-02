@@ -23,8 +23,8 @@ import solidWood from "../assets/images/wall panels/Solid Wooden  Panels.jpg";
 import spcWallPanel from "../assets/images/wall panels/SPC Wall Panel.jpg";
 import fiberCementPanels from "../assets/images/wall panels/Fiber Cement Panels.jpg";
 import wpcOutdoorPanels from "../assets/images/wall panels/WPC Outdoor  Panels.jpg";
-import mdf from "../assets/images/wall panels/mdf.jpg";
-import hpl from "../assets/images/wall panels/HPL Wooden  Panels.webp";
+import mdf_item from "../assets/images/wooden/mdf.jpg";
+import hpl_item from "../assets/images/wooden/hpl.jpg";
 import wpc from "../assets/images/wall panels/wpc.jpg";
 import uv from "../assets/images/wall panels/uv-panel.jpg";
 import wallFinishes from "../assets/images/wall panels/wall finishes.jpg";
@@ -57,6 +57,8 @@ import wardrobe from "../assets/images/kitchen & wardrob/Wardrobe Accessories.jp
 import kitchen_wardrobe_cover from "../assets/images/kitchen & wardrob/kitchen & wardrobe cover.jpg";
 import profile from "../assets/images/kitchen & wardrob/Wardrobe Profile.jpg";
 import mdf_wood from "../assets/images/wooden/MDF and Chipboardd.jpg";
+import hpl from "../assets/images/wooden/hpl.jpg";
+import mdf from "../assets/images/wooden/mdf.jpg";
 import solid_wood from "../assets/images/wooden/wooden cover.jpg";
 import corian from "../assets/images/solid surfaces /corian.jpeg";
 import granite from "../assets/images/solid surfaces /granite.jpeg";
@@ -96,8 +98,6 @@ export const productData = [
     name: "Flooring",
     slug: "flooring",
     image: flooring,
-    description:
-      "Stone Plastic Composite (SPC) flooring is a rigid, waterproof flooring solution known for its enhanced durability and stability. Similarly, Wood Plastic Composite (WPC) flooring offers a resilient, water-resistant option with a more comfortable feel underfoot and a natural wood-like appearance.",
     features: [
       "Waterproof and moisture-resistant",
       "Easy to clean and maintain",
@@ -124,10 +124,8 @@ export const productData = [
 
     categories: [
       {
-        name: "Indoor Flooring",
+        name: "Flooring Solutions",
         slug: "flooring",
-        description:
-          "Stone Plastic Composite flooring - a rigid, waterproof flooring solution with enhanced durability",
         image: flooring,
         categories: [
           {
@@ -217,15 +215,23 @@ export const productData = [
             slug: "artificial-grass",
             image: artificialGrass,
           },
-          {
-            name: "Modular Access / Raised Flooring",
-            slug: "modular-access-raised-flooring",
-            image: modularFlooring,
-          },
+
           {
             name: "Marble Flooring & Cladding",
             slug: "marble-flooring-cladding",
             image: marbleFloor,
+          },
+        ],
+      },
+      {
+        name: "System Flooring",
+        slug: "system-flooring",
+        image: modularFlooring,
+        categories: [
+          {
+            name: "Modular Access / Raised Flooring",
+            slug: "modular-access-raised-flooring",
+            image: modularFlooring,
           },
           {
             name: "Industrial / Epoxy Flooring",
@@ -235,7 +241,7 @@ export const productData = [
         ],
       },
       {
-        name: "Sports Infrastructure",
+        name: "Sports Flooring Solutions",
         slug: "sports-infrastructure",
         image: football,
         categories: [
@@ -280,8 +286,6 @@ export const productData = [
   {
     name: "Wall Panels",
     slug: "wall-panels",
-    description:
-      "Elevate your space with surfaces that do more than just sit there. Our custom wall paneling collection focuses on the interplay of light and shadow.",
     image: wallPanelCover,
     features: [
       "Waterproof and moisture-resistant",
@@ -333,22 +337,6 @@ export const productData = [
         image: wpcOutdoorPanels,
       },
       {
-        name: "MDF & Wooden Wall Panel",
-        slug: "mdf-panel",
-        thickness: "1.5mm - 12mm",
-        wearLayer: "30 years",
-        warranty: "10 years",
-        image: mdf,
-      },
-      {
-        name: "HPL Wooden Panel",
-        slug: "hpl-cladding",
-        thickness: "1.5mm - 12mm",
-        wearLayer: "30 years",
-        warranty: "10 years",
-        image: hpl,
-      },
-      {
         name: "UV Panel",
         slug: "uv-panel",
         thickness: "1.5mm - 12mm",
@@ -364,14 +352,14 @@ export const productData = [
         warranty: "10 years",
         image: wpc,
       },
-      {
-        name: "Wall Finishes",
-        slug: "wall-finishes",
-        thickness: "1.5mm - 12mm",
-        wearLayer: "30 years",
-        warranty: "10 years",
-        image: wallFinishes,
-      },
+      // {
+      //   name: "Wall Finishes",
+      //   slug: "wall-finishes",
+      //   thickness: "1.5mm - 12mm",
+      //   wearLayer: "30 years",
+      //   warranty: "10 years",
+      //   image: wallFinishes,
+      // },
       {
         name: "Solid Wooden Panel",
         slug: "solid-wooden-panel",
@@ -386,9 +374,6 @@ export const productData = [
   {
     name: "Doors",
     slug: "doors",
-    description:
-      "Redefine the transition between spaces. Our signature pivot doors eliminate bulky frames in favor of a monolithic, architectural look that feels like a moving part of the wall itself.",
-
     image: doorCover,
     categories: [
       {
@@ -417,8 +402,6 @@ export const productData = [
   {
     name: "Windows",
     slug: "windows",
-    description:
-      "Eliminate the boundary between inside and out. Our Horizon windows feature ultra-slim profiles that maximize your glass to wall ratio, turning every window into a living piece of art.",
     image: windowsCover,
     categories: [
       {
@@ -436,8 +419,6 @@ export const productData = [
   {
     name: "partitions",
     slug: "partitions",
-    description:
-      "Maintain the visual scale of your floor plan while creating functional zones. Our glass partitions use high-clarity glazing to define spaces without blocking light or sightlines.",
     image: partitionCover,
     categories: [
       {
@@ -460,8 +441,6 @@ export const productData = [
   {
     name: "Ceiling Solutions",
     slug: "ceiling-solutions",
-    description:
-      "Bring the ceiling into the design conversation. Our modular 3D panels move away from flat surfaces to create a rhythmic, geometric landscape overhead.",
     image: ceilingCover,
     categories: [
       {
@@ -494,8 +473,6 @@ export const productData = [
   {
     name: "Carpentry Accessories",
     slug: "carpentry-accessories",
-    description:
-      "The handle is the first physical interaction a person has with your furniture. Our accessory collection focuses on ergonomic weight and artisanal finishes that make every 'open and close' feel intentional.",
     image: carpentry_accessories,
     categories: [
       {
@@ -519,7 +496,6 @@ export const productData = [
     name: "Profile & Accessories",
     slug: "profile-accessories",
     image: profile_cover,
-    description: `Eliminate the need for traditional bulky skirting and architraves. Our shadow gap profiles create a "floating" effect where walls meet floors and ceilings, adding a sense of weightless luxury to the room's geometry.`,
     categories: [
       {
         name: "Interior Decorative Profile & Moldings",
@@ -546,7 +522,6 @@ export const productData = [
   {
     name: "Kitchen & Wardrobe",
     slug: "kitchen-wardrobe",
-    description: `We treat the kitchen as a precision instrument. Our designs move away from cluttered cabinetry toward a "gallery" aesthetic, where appliances are hidden, and surfaces are continuous.`,
     image: kitchen_wardrobe_cover,
     categories: [
       {
@@ -570,11 +545,20 @@ export const productData = [
   {
     name: "Wood Materials",
     slug: "wood-materials",
-    description: `Our selection of solid hardwoods is curated for those who appreciate the slow growth and deep character of natural timber.`,
     image: mdf_wood,
     categories: [
       {
-        name: "MDF, HPL and Chipboard",
+        name: "MDF",
+        slug: "mdf-and-chipboard",
+        image: mdf_item,
+      },
+      {
+        name: "HPL",
+        slug: "mdf-and-chipboard",
+        image: hpl_item,
+      },
+      {
+        name: "Chipboard",
         slug: "mdf-and-chipboard",
         image: mdf_wood,
       },
@@ -583,7 +567,6 @@ export const productData = [
   {
     name: "Solid Surface For Interior",
     slug: "solid-surface-for-interior",
-    description: `Imagine a kitchen island where the countertop, sink, and backsplash are a single, uninterrupted piece of stone-like material.`,
     image: solid_surface_cover,
     categories: [
       {
@@ -611,7 +594,6 @@ export const productData = [
   {
     name: "Curtain & Blinds",
     slug: "curtain-and-blinds",
-    description: `Transform your windows into a soft-focus backdrop. Our drapery collection focuses on the "drop"—the way fabric falls and pools on the floor—to create a sense of height and quiet luxury.`,
     image: curtain_cover,
     categories: [
       {
@@ -664,7 +646,6 @@ export const productData = [
   {
     name: "Shades",
     slug: "shades",
-    description: `Control the climate without losing the horizon. Our solar shades act as a "liquid" filter for your windows, cutting down 99% of UV rays and glare while preserving your view of the city.`,
     image: hdpe,
     categories: [
       {
@@ -687,7 +668,6 @@ export const productData = [
   {
     name: "Fencing",
     slug: "fencing",
-    description: `Bring the warmth of wood to your exterior without the warping or maintenance of traditional timber. `,
     image: wpcFencing,
     categories: [
       {

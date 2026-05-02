@@ -1,16 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home";
-import BlogDetail from "./pages/BlogDetail";
+import BlogSection from "./components/BlogSection";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppButton from "./components/WhatsappButton";
 import AboutSection from "./pages/About";
-import ProjectsPage from "./pages/Projects";
-import ProductDetail from "./pages/ProductDetail";
+import BlogDetail from "./pages/BlogDetail";
+import CareerPage from "./pages/Careers";
 import ContactUs from "./pages/Contact";
 import Gallery from "./pages/Gallery";
-import WhatsAppButton from "./components/WhatsappButton";
-import CareerPage from "./pages/Careers";
-import BlogSection from "./components/BlogSection";
+import Home from "./pages/Home";
+import ProductDetail from "./pages/ProductDetail";
+import ProjectsPage from "./pages/Projects";
+import DownloadButton from "./components/Download";
 
 function App() {
   return (
@@ -31,7 +32,10 @@ function App() {
       </Routes>
 
       {/* whatsapp icon */}
-      <WhatsAppButton />
+      <div className="fixed bottom-6 right-6 z-50 flex gap-2 items-center">
+        <DownloadButton />
+        <WhatsAppButton />
+      </div>
     </BrowserRouter>
   );
 }

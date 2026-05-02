@@ -1,15 +1,14 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
 import { gsap } from "gsap";
+import { useRef } from "react";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import { IMAGES } from "../utils/assets";
-import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 const slides = [
   {
@@ -41,7 +40,6 @@ const slides = [
     cta: "See Collection",
   },
 ];
-
 
 const Spotlight = () => {
   const sectionRef = useRef(null);

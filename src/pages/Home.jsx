@@ -1,5 +1,6 @@
 import ArchitectureProcess from "../components/ArchitectureProcess";
 import BlogSection from "../components/BlogSection";
+import Counter from "../components/Counter";
 import FinishingSolutions from "../components/FinishingSolutions";
 import HeroSection from "../components/HeroSection";
 import HorizontalGallery from "../components/HorizontalGallery";
@@ -18,10 +19,11 @@ const Home = () => {
       <Layout>
         <Spotlight />
         {/* <HeroSection /> */}
+        <Counter />
         <ServicesSection />
+        <LogoSlider />
         <ArchitectureProcess />
         <TailoredServices />
-        <LogoSlider />
         {/* <FinishingSolutions /> */}
         {/* <ProductShowcaseSection /> */}
         {/* <Testimonial /> */}

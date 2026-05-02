@@ -46,7 +46,7 @@ const TailoredServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="bg-gray-50 flex flex-col group cursor-pointer h-full border border-gray-100"
+                className="bg-gray-50 flex flex-col group cursor-pointer h-full border border-gray-100 group overflow-hidden relative"
               >
                 <div className="relative aspect-[4/5] overflow-hidden bg-white">
                   <img
@@ -57,29 +57,30 @@ const TailoredServices = () => {
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
 
-                <div className="p-6 bg-gray-50 flex flex-col flex-grow">
-                  <h5 className="text-sm mb-4 font-bold text-primary leading-tight uppercase tracking-wider">
+                <div className="p-6 flex items-center justify-between bg-gradient-to-t from-primary to-transparent text-white absolute w-full left-0 -bottom-[100%] group-hover:bottom-0 transition-all duration-500">
+                  <h5 className="text-sm font-bold text-white leading-tight uppercase tracking-wider">
                     {product?.name}
                   </h5>
+                  <Link
+                    to={`/products/${product?.slug}`}
+                    style={{ transition: "all 0.3s ease" }}
+                    className="p-2 w-10 h-10 flex items-center justify-center bg-white/10 text-white border border-gray-100/30 hover:border-primary hover:text-[#fff] hover:shadow-md"
+                  >
+                    <LuArrowRight size={18} />
+                  </Link>
 
-                  <div className="flex flex-col gap-3 mb-4 flex-grow">
+                  {/* <div className="flex flex-col gap-3 mb-4 flex-grow">
                     <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-3">
                       {product?.description}
                     </p>
-                  </div>
+                  </div> */}
 
-                  <div className="mt-auto flex justify-between items-center pt-4 border-t border-gray-200">
+                  {/* <div className="mt-auto flex justify-between items-center pt-4 border-t border-gray-200">
                     <span className="text-[10px] font-black uppercase tracking-[0.1em] text-gray-400">
                       {index + 1}
                     </span>
-                    <Link
-                      to={`/products/${product?.slug}`}
-                      style={{ transition: "all 0.3s ease" }}
-                      className="p-2 bg-primary text-white border border-gray-200 hover:border-primary hover:text-[#fff] hover:shadow-md"
-                    >
-                      <LuArrowRight size={18} />
-                    </Link>
-                  </div>
+                   
+                  </div> */}
                 </div>
               </motion.div>
             </SwiperSlide>

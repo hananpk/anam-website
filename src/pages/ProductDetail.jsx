@@ -11,7 +11,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveSubproduct(null)
+    setActiveSubproduct(null);
   }, [slug]);
 
   if (!product) {
@@ -29,25 +29,26 @@ const ProductDetail = () => {
       <main>
         {/* Hero Section */}
         <section
-          className="relative h-[45vh] flex items-center px-10 bg-cover bg-center bg-gray-900"
+          className="relative h-[60vh] flex items-center px-10 bg-cover bg-center bg-gray-900"
           style={{
-            backgroundImage: `url(${activeSubproduct?.image ||
+            backgroundImage: `url(${
+              activeSubproduct?.image ||
               product.image ||
               "https://plus.unsplash.com/premium_photo-1683129627035-e5a145c3d705"
-              })`,
+            })`,
           }}
         >
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="z-10 max-w-7xl mx-auto w-full">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#8B1743]/80 to-transparent" />
+          <div className="z-10 max-w-7xl mx-auto w-full absolute bottom-12 text-center left-1/2 -translate-x-1/2">
             {activeSubproduct && (
               <button
                 onClick={() => setActiveSubproduct(null)}
-                className="mb-6 text-sm font-bold text-primary cursor-pointer"
+                className="mb-6 text-sm font-bold text-white cursor-pointer"
               >
                 ← Back to Categories
               </button>
             )}
-            <h1 className="text-white text-5xl md:text-7xl font-bold ">
+            <h1 className="text-white text-5xl md:text-7xl font-bold capitalize">
               {activeSubproduct ? activeSubproduct.name : product.name}
             </h1>
             <p className="text-white text-lg max-w-2xl mt-2">
@@ -59,7 +60,7 @@ const ProductDetail = () => {
         </section>
 
         {/* Content */}
-        <section className="py-20 px-6 bg-white">
+        <section className="py-20 px-6 bg-[#f9f4ef]">
           <div className="max-w-7xl mx-auto">
             {/* 🔙 Back Button */}
 
@@ -74,9 +75,14 @@ const ProductDetail = () => {
               {data?.categories?.map((prod) => (
                 <div
                   key={prod.slug}
-                  onClick={() => prod.categories && !activeSubproduct && setActiveSubproduct(prod)}
-                  className={`bg-white p-4 shadow-sm border border-gray-100 transition hover:shadow-lg ${!activeSubproduct ? "cursor-pointer" : ""
-                    }`}
+                  onClick={() =>
+                    prod.categories &&
+                    !activeSubproduct &&
+                    setActiveSubproduct(prod)
+                  }
+                  className={`bg-white p-4 shadow-sm border border-gray-100 transition hover:shadow-lg ${
+                    !activeSubproduct ? "cursor-pointer" : ""
+                  }`}
                 >
                   <img
                     src={prod.image || "/placeholder.jpg"}

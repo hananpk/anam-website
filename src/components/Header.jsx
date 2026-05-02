@@ -22,6 +22,7 @@ const megaMenuItems = [
     "Shades",
     "Fencing",
   ],
+  ["UPVC", "Aluminum", "Stainless Steel"],
 ];
 
 const Header = () => {
@@ -58,13 +59,12 @@ const Header = () => {
     { name: "SERVICES", path: "/services" },
     { name: "CAREERS", path: "/careers" },
     { name: "BLOG", path: "/blog" },
-    { name: "DOWNLOAD", path: "/download" },
     { name: "CONTACT", path: "/contact" },
   ];
 
   return (
     <header className="sticky top-0 w-full z-50 bg-primary">
-      <div className="max-w-[1280px] mx-auto px-6 h-[70px] md:h-[90px] flex items-center justify-between relative">
+      <div className="max-w-[1280px] mx-auto h-[70px] md:h-[90px] flex items-center justify-between relative">
         {/* Logo Section */}
         <div
           className={`flex items-center gap-3 shrink-0 ${isSearchOpen ? "hidden md:flex" : "flex"}`}
@@ -111,7 +111,7 @@ const Header = () => {
             </button>
 
             {isMegaMenuOpen && (
-              <div className="absolute left-1/2 top-full w-[80vw] max-w-2xl bg-white shadow-2xl border border-gray-100 p-10 grid grid-cols-2 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
+              <div className="absolute left-1/2 top-full w-[80vw] max-w-2xl bg-[#f9f4ef] shadow-2xl border border-gray-100 p-10 grid grid-cols-3 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
                 {megaMenuItems.map((column, colIdx) => (
                   <ul key={colIdx} className="space-y-3">
                     {column.map((item, i) => (
@@ -282,7 +282,8 @@ const Header = () => {
         <div className="flex items-center">
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="p-4 md:p-5 hover:bg-gray-50 hover:text-black transition-colors text-white border-l md:border-x border-gray-100"
+            className="cursor-pointer p-4 md:p-4 bg-gray-100/20 hover:text-black hvoer
+             transition-colors text-white border-l md:border border-gray-100/30"
           >
             <Search size={20} />
           </button>
