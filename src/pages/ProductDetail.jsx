@@ -12,6 +12,10 @@ const ProductDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     setActiveSubproduct(null);
+
+    return () => {
+      setActiveSubproduct(null);
+    };
   }, [slug]);
 
   if (!product) {

@@ -111,7 +111,7 @@ const Spotlight = () => {
                 className="bg-image absolute inset-0 w-full h-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 bg-black/45" />
 
               <div className="absolute left-4 md:left-24 bottom-[120px] z-10 max-w-4xl px-6">
                 <h1 className="text-white text-3xl md:text-5xl font-bold leading-[1.1em] mt-4">

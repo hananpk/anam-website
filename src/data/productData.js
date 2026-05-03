@@ -294,18 +294,18 @@ export const productData = [
         ],
       },
 
-      {
-        name: "Landscape Design & Developement",
-        slug: "landscape-design-developement",
-        image: landscaping,
-        categories: [
-          {
-            name: "Landscaping",
-            slug: "landscaping",
-            image: landscaping,
-          },
-        ],
-      },
+      // {
+      //   name: "Landscape Design & Developement",
+      //   slug: "landscape-design-developement",
+      //   image: landscaping,
+      //   categories: [
+      //     {
+      //       name: "Landscaping",
+      //       slug: "landscaping",
+      //       image: landscaping,
+      //     },
+      //   ],
+      // },
     ],
   },
 
@@ -575,17 +575,17 @@ export const productData = [
     categories: [
       {
         name: "MDF",
-        slug: "",
+        slug: "mdf-wood-panel",
         image: mdf_item,
       },
       {
         name: "HPL",
-        slug: "",
+        slug: "hpl-wood-panel",
         image: hpl_item,
       },
       {
         name: "Chipboard",
-        slug: "",
+        slug: "chipboard-wood-panel",
         image: mdf_wood,
       },
     ],

@@ -24,17 +24,17 @@ export default function ServicesPage() {
     <Layout>
       <section className="w-full">
         {/* HERO */}
-        <div className="relative h-[300px] w-full overflow-hidden">
+        <div className="relative h-[65vh] w-full overflow-hidden">
           <img
             src={landscape_cover}
-            alt="Flooring"
-            className="w-full h-full object-cover"
+            alt="Landscape Flooring"
+            className="w-full h-full object-cover bg-bottom"
           />
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-[#8B1743]/50 flex items-center justify-center">
-            <h1 className="text-white text-4xl md:text-5xl font-semibold">
-              Flooring
+            <h1 className="text-white text-4xl md:text-5xl font-bold">
+              Landscape Design & Developement
             </h1>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function ServicesPage() {
             {categories.map((item, index) => (
               <div
                 key={index}
-                className="bg-white overflow-hidden shadow-sm hover:shadow-lg transition duration-300 group cursor-pointer"
+                className="bg-white overflow-hidden shadow-sm hover:shadow-lg transition duration-300 group cursor-pointer p-4"
               >
                 <div className="overflow-hidden">
                   <img
