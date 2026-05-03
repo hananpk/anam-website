@@ -77,7 +77,7 @@ const Counter = () => {
   return (
     <section ref={sectionRef} className="overflow-hidden pb-10">
       <div className=" mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center bg-[#8B1743]/10 ">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center bg-[#5a0f2f]/10 ">
           {stats.map((item, i) => (
             <div
               key={i}

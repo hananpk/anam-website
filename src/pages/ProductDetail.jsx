@@ -38,7 +38,7 @@ const ProductDetail = () => {
             })`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-[#8B1743]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#5a0f2f]/80 to-transparent" />
           <div className="z-10 max-w-7xl mx-auto w-full absolute bottom-12 text-center left-1/2 -translate-x-1/2">
             {activeSubproduct && (
               <button
@@ -75,11 +75,7 @@ const ProductDetail = () => {
               {data?.categories?.map((prod) => (
                 <div
                   key={prod.slug}
-                  onClick={() =>
-                    prod.categories &&
-                    !activeSubproduct &&
-                    setActiveSubproduct(prod)
-                  }
+                  onClick={() => prod.categories && setActiveSubproduct(prod)}
                   className={`bg-white p-4 shadow-sm border border-gray-100 transition hover:shadow-lg ${
                     !activeSubproduct ? "cursor-pointer" : ""
                   }`}

@@ -144,7 +144,7 @@ const Header = () => {
 
         {/* Search Overlay */}
         <div
-          className={`absolute inset-0 bg-[#8B1743] z-50 flex flex-col transition-all duration-300 ${isSearchOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
+          className={`absolute inset-0 bg-[#5a0f2f] z-50 flex flex-col transition-all duration-300 ${isSearchOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
         >
           <div className="flex items-center px-6 md:px-10 h-full border-b border-gray-100">
             <Search size={22} className="text-white" color="#fff" />
@@ -161,7 +161,7 @@ const Header = () => {
                 setIsSearchOpen(false);
                 setSearchQuery("");
               }}
-              className="p-2 text-white hover:bg-gray-100 hover:text-black rounded-full"
+              className="p-2 text-white hover:bg-gray-100 hover:text-black "
             >
               <X size={24} />
             </button>
@@ -283,7 +283,7 @@ const Header = () => {
           <button
             onClick={() => setIsSearchOpen(true)}
             className="cursor-pointer p-4 md:p-4 bg-gray-100/20 hover:text-black hvoer
-             transition-colors text-white border-l md:border border-gray-100/30"
+             transition-colors text-white border-l md:border border-gray-100/30 hover:bg-white"
           >
             <Search size={20} />
           </button>

@@ -83,7 +83,7 @@ const PERKS = [
 ];
 
 const s = {
-  brand: "#8B1743",
+  brand: "#5a0f2f",
   brandLight: "#a8204f",
   cream: "#f9f4ef",
   textDark: "#1a1a1a",
@@ -475,7 +475,7 @@ function SectionLabel({ children }) {
         fontWeight: 500,
         letterSpacing: "0.18em",
         textTransform: "uppercase",
-        color: "#8B1743",
+        color: "#5a0f2f",
         marginBottom: 32,
         display: "flex",
         alignItems: "center",
@@ -498,7 +498,7 @@ function ModalSection({ label }) {
         fontWeight: 500,
         letterSpacing: "0.12em",
         textTransform: "uppercase",
-        color: "#8B1743",
+        color: "#5a0f2f",
         margin: "20px 0 10px",
         borderBottom: "1px solid rgba(139,23,67,0.15)",
         paddingBottom: 8,
@@ -527,7 +527,7 @@ function ModalListItem({ children }) {
           top: 14,
           width: 5,
           height: 5,
-          background: "#8B1743",
+          background: "#5a0f2f",
           display: "inline-block",
         }}
       />

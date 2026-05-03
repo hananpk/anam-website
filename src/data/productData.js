@@ -92,12 +92,21 @@ import profile_cover from "../assets/images/tile profile cover.png";
 // import handleCover from "../assets/images/carpentry/Handle cover.jpg";
 
 import solidWoodenFlooring from "../assets/images/floooring/Solid Wooden Flooring  .jpg";
+import flooring_banner from "../assets/images/floooring/flooring-banner.jpg";
+import curtain_banner from "../assets/images/Curtains/curtain-banner.jpg";
+import fencing_banner from "../assets/images/fencing/fiber-banner.jpeg";
+import solid_banner from "../assets/images/solid surfaces /solid-banner.jpg";
+import wall_banner from "../assets/images/wall panels/wall-banner.jpg";
+import wood_banner from "../assets/images/wooden/wood-banner.jpg";
+import atlas01 from "../assets/images/floooring/ATLAS-01.jpg";
+import atlas02 from "../assets/images/floooring/ATLAS-02.jpg";
+import atlas03 from "../assets/images/floooring/ATLAS-03.jpg";
 
 export const productData = [
   {
     name: "Flooring",
     slug: "flooring",
-    image: flooring,
+    image: flooring_banner,
     features: [
       "Waterproof and moisture-resistant",
       "Easy to clean and maintain",
@@ -135,6 +144,23 @@ export const productData = [
             thickness: "1.5mm - 12mm",
             wearLayer: "30 years",
             warranty: "10 years",
+            categories: [
+              {
+                name: "Atlas 01",
+                slug: "atlas-01",
+                image: atlas01,
+              },
+              {
+                name: "Atlas 02",
+                slug: "atlas-02",
+                image: atlas02,
+              },
+              {
+                name: "Atlas 03",
+                slug: "atlas-03",
+                image: atlas03,
+              },
+            ],
           },
           {
             name: "SPC Flooring",
@@ -286,7 +312,7 @@ export const productData = [
   {
     name: "Wall Panels",
     slug: "wall-panels",
-    image: wallPanelCover,
+    image: wall_banner,
     features: [
       "Waterproof and moisture-resistant",
       "Easy to clean and maintain",
@@ -545,21 +571,21 @@ export const productData = [
   {
     name: "Wood Materials",
     slug: "wood-materials",
-    image: mdf_wood,
+    image: wood_banner,
     categories: [
       {
         name: "MDF",
-        slug: "mdf-and-chipboard",
+        slug: "",
         image: mdf_item,
       },
       {
         name: "HPL",
-        slug: "mdf-and-chipboard",
+        slug: "",
         image: hpl_item,
       },
       {
         name: "Chipboard",
-        slug: "mdf-and-chipboard",
+        slug: "",
         image: mdf_wood,
       },
     ],
@@ -567,7 +593,7 @@ export const productData = [
   {
     name: "Solid Surface For Interior",
     slug: "solid-surface-for-interior",
-    image: solid_surface_cover,
+    image: solid_banner,
     categories: [
       {
         name: "Corian",
@@ -594,7 +620,7 @@ export const productData = [
   {
     name: "Curtain & Blinds",
     slug: "curtain-and-blinds",
-    image: curtain_cover,
+    image: curtain_banner,
     categories: [
       {
         name: "Blackout Blinds",
@@ -668,7 +694,7 @@ export const productData = [
   {
     name: "Fencing",
     slug: "fencing",
-    image: wpcFencing,
+    image: fencing_banner,
     categories: [
       {
         name: "WPC Fencing",

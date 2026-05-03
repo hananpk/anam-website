@@ -8,7 +8,7 @@ export default function DownloadButton() {
         download
         className="
           flex items-center 
-          bg-[#8B1743] text-white 
+          bg-[#5a0f2f] text-white 
           rounded-full 
           overflow-hidden 
           shadow-lg 

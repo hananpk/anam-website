@@ -38,7 +38,7 @@ const ServiceSection = () => {
               relationship which help us to continue to thrive and develop.
             </p>
 
-            <button className="bg-[#8B1743] hover:bg-[#4B0B22] text-white px-8 py-4 font-bold transition-all group">
+            <button className="bg-[#5a0f2f] hover:bg-[#4B0B22] text-white px-8 py-4 font-bold transition-all group">
               <Link to="/about" className="flex items-center gap-2">
                 {" "}
                 Read More

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @theme {
-  --color-primary: #8B1743;
-  --color-secondary: #8B1743;
+  --color-primary: #5a0f2f;
+  --color-secondary: #5a0f2f;
 }
 
 :root{
-    --primary-color: #8B1743;
+    --primary-color: #5a0f2f;
     /* 4B0B22 */
-    --secondary-color: #8B1743;
+    --secondary-color: #5a0f2f;
 }
 body {
     font-family: "Raleway", sans-serif;
