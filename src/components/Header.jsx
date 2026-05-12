@@ -2,6 +2,10 @@ import React, { useState, useMemo } from "react";
 import { ChevronDown, Menu, X, Search, ArrowRight } from "lucide-react";
 import { IMAGES } from "../utils/assets";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  serviceMegaMenuItems,
+  serviceItemToSlug,
+} from "../data/serviceData";
 
 const megaMenuItems = [
   [
@@ -27,9 +31,11 @@ const megaMenuItems = [
 
 const Header = () => {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isServiceMenuOpen, setIsServiceMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile state
-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false); // Mobile accordion state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
@@ -50,6 +56,13 @@ const Header = () => {
       .replace(/^-+|-+$/g, "");
     navigate(`/products/${route}`);
     setIsMegaMenuOpen(false);
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleClickService = (item) => {
+    const route = serviceItemToSlug(item);
+    navigate(`/services/${route}`);
+    setIsServiceMenuOpen(false);
     setIsMobileMenuOpen(false);
   };
 
@@ -131,11 +144,66 @@ const Header = () => {
             )}
           </div>
 
-          {navLinks.slice(2).map((link) => (
+          {/* Services Dropdown */}
+          <div
+            className="h-full flex items-center relative"
+            onMouseEnter={() => setIsServiceMenuOpen(true)}
+            onMouseLeave={() => setIsServiceMenuOpen(false)}
+          >
+            <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-widest text-white hover:opacity-70 transition-colors h-full uppercase">
+              SERVICES{" "}
+              <ChevronDown
+                size={14}
+                className={
+                  isServiceMenuOpen
+                    ? "rotate-180 transition-transform"
+                    : "transition-transform"
+                }
+              />
+            </button>
+
+            {isServiceMenuOpen && (
+              <div className="absolute left-1/2 top-full w-[520px] bg-[#f9f4ef] shadow-2xl border border-gray-100 p-10 grid grid-cols-2 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
+                {serviceMegaMenuItems.map((col, colIdx) => (
+                  <ul key={colIdx} className="space-y-3">
+                    <li className="mb-4">
+                      <span className="text-[11px] font-black uppercase tracking-widest text-gray-400">
+                        {col.heading}
+                      </span>
+                    </li>
+                    {col.items.map((item, i) => (
+                      <li
+                        key={i}
+                        onClick={() => handleClickService(item)}
+                        className="group cursor-pointer"
+                      >
+                        <span className="text-[14px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-primary">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                    {col.items.length === 0 && (
+                      <li
+                        onClick={() => handleClickService(col.heading)}
+                        className="group cursor-pointer"
+                      >
+                        <span className="text-[14px] text-gray-500 hover:text-black hover:pl-3 transition-all duration-300 block border-l-2 border-transparent hover:border-primary">
+                          View All
+                        </span>
+                      </li>
+                    )}
+                  </ul>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Remaining nav links (skip SERVICES since it's now a dropdown) */}
+          {navLinks.slice(3).map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className="text-[13px] font-bold text-white tracking-widest hover:opacity-70 transition-opacity text-black"
+              className="text-[13px] font-bold text-white tracking-widest hover:opacity-70 transition-opacity"
             >
               {link.name}
             </Link>
@@ -263,7 +331,50 @@ const Header = () => {
                   </div>
                 </div>
 
-                {navLinks.slice(2).map((link) => (
+                {/* Mobile Services Accordion */}
+                <div>
+                  <button
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="flex items-center justify-between w-full text-sm font-bold tracking-widest text-black"
+                  >
+                    SERVICES{" "}
+                    <ChevronDown
+                      size={18}
+                      className={mobileServicesOpen ? "rotate-180" : ""}
+                    />
+                  </button>
+                  <div
+                    className={`mt-4 space-y-4 overflow-hidden transition-all duration-300 ${mobileServicesOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+                  >
+                    {serviceMegaMenuItems.map((col, colIdx) => (
+                      <div key={colIdx}>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 pl-4 mb-2">
+                          {col.heading}
+                        </p>
+                        {col.items.map((item, i) => (
+                          <button
+                            key={i}
+                            onClick={() => handleClickService(item)}
+                            className="block w-full text-left text-[12px] text-gray-500 hover:text-primary pl-4 border-l border-gray-100 py-1"
+                          >
+                            {item}
+                          </button>
+                        ))}
+                        {col.items.length === 0 && (
+                          <button
+                            onClick={() => handleClickService(col.heading)}
+                            className="block w-full text-left text-[12px] text-gray-500 hover:text-primary pl-4 border-l border-gray-100 py-1"
+                          >
+                            View All
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Remaining links (skip SERVICES index 2) */}
+                {navLinks.slice(3).map((link) => (
                   <Link
                     key={link.name}
                     to={link.path}
@@ -282,13 +393,12 @@ const Header = () => {
         <div className="flex items-center">
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="cursor-pointer p-4 md:p-4 bg-gray-100/20 hover:text-black hvoer
-             transition-colors text-white border-l md:border border-gray-100/30 hover:bg-white"
+            className="cursor-pointer p-2 md:p-4 bg-gray-100/20 hover:text-black transition-colors text-white border-l md:border border-gray-100/30 hover:bg-white"
           >
             <Search size={20} />
           </button>
           <button
-            className="lg:hidden p-2 -ml-2 text-white"
+            className="lg:hidden p-2 -ml-2 text-white ml-2"
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <Menu size={24} />
