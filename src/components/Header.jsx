@@ -2,10 +2,7 @@ import React, { useState, useMemo } from "react";
 import { ChevronDown, Menu, X, Search, ArrowRight } from "lucide-react";
 import { IMAGES } from "../utils/assets";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  serviceMegaMenuItems,
-  serviceItemToSlug,
-} from "../data/serviceData";
+import { serviceMegaMenuItems, serviceItemToSlug } from "../data/serviceData";
 
 const megaMenuItems = [
   [
@@ -163,11 +160,11 @@ const Header = () => {
             </button>
 
             {isServiceMenuOpen && (
-              <div className="absolute left-1/2 top-full w-[520px] bg-[#f9f4ef] shadow-2xl border border-gray-100 p-10 grid grid-cols-2 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
+              <div className="absolute left-1/2 top-full w-[580px] bg-[#f9f4ef] shadow-2xl border border-gray-100 p-10 grid grid-cols-2 gap-8 animate-in fade-in slide-in-from-top-2 z-50 transform -translate-x-1/2">
                 {serviceMegaMenuItems.map((col, colIdx) => (
                   <ul key={colIdx} className="space-y-3">
                     <li className="mb-4">
-                      <span className="text-[11px] font-black uppercase tracking-widest text-gray-400">
+                      <span className="text-[11px] font-black uppercase tracking-widest text-gray-800">
                         {col.heading}
                       </span>
                     </li>

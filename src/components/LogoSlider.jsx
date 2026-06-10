@@ -1,10 +1,10 @@
-import logo1 from "../assets/images/logos/1.png";
-import logo2 from "../assets/images/logos/2.png";
-import logo3 from "../assets/images/logos/3.png";
-import logo4 from "../assets/images/logos/4.png";
-import logo5 from "../assets/images/logos/5.png";
-import logo6 from "../assets/images/logos/6.png";
-import logo7 from "../assets/images/logos/7.png";
+import logo1 from "../assets/images/logos/logo1.png";
+import logo2 from "../assets/images/logos/logo2.png";
+import logo3 from "../assets/images/logos/logo3.png";
+import logo4 from "../assets/images/logos/logo4.png";
+import logo5 from "../assets/images/logos/logo5.png";
+import logo6 from "../assets/images/logos/logo6.png";
+import logo7 from "../assets/images/logos/logo7.png";
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
 
@@ -56,16 +56,19 @@ export default function LogoSlider() {
       <div className="track mt-10 pb-10">
         <div className="wrapper-left">
           {logos.map((logo, i) => (
-            <div key={i} className="logo-item">
-              <img src={logo} width={130} alt={`logo-${i}`} />
+            <div key={i} className="logo-item flex items-center justify-center">
+              <img src={logo} width={90} alt={`logo-${i}`} />
             </div>
           ))}
         </div>
 
         <div className="wrapper-left" aria-hidden="true">
           {logos.map((logo, i) => (
-            <div key={`dup1-${i}`} className="logo-item">
-              <img src={logo} width={130} alt={`logo-${i}`} />
+            <div
+              key={`dup1-${i}`}
+              className="logo-item flex items-center justify-center"
+            >
+              <img src={logo} width={90} alt={`logo-${i}`} />
             </div>
           ))}
         </div>
