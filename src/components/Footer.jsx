@@ -22,14 +22,22 @@ const Footer = () => {
     {
       icon: <FaInstagram size={20} />,
       name: "Instagram",
-      href: "https://www.instagram.com/anaminteriors.qa",
+      href: "https://www.instagram.com/anamtrading/",
     },
-    { icon: <FaFacebookF size={20} />, name: "Facebook", href: "#" },
-    { icon: <FaYoutube size={22} />, name: "YouTube", href: "#" },
+    {
+      icon: <FaFacebookF size={20} />,
+      name: "Facebook",
+      href: "https://www.facebook.com/anamtradingandcontracting/",
+    },
+    {
+      icon: <FaYoutube size={22} />,
+      name: "YouTube",
+      href: "https://www.youtube.com/@AnamTradingandContracting",
+    },
     {
       icon: <FaLinkedin size={20} />,
       name: "LinkedIn",
-      href: "https://www.linkedin.com/company/anam-interiors",
+      href: "https://www.linkedin.com/company/anam-trading-and-contracting-doha/",
     },
   ];
 
