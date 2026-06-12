@@ -32,12 +32,12 @@ export default function LogoSlider() {
 
           .wrapper-left {
             display: flex;
-            animation: marquee-right 20s linear infinite;
+            animation: marquee-right 10s linear infinite;
           }
 
           .wrapper-right {
             display: flex;
-            animation: marquee-left 20s linear infinite;
+            animation: marquee-left 10s linear infinite;
           }
 
           .logo-item {

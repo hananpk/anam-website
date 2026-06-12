@@ -7,6 +7,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { IMAGES } from "../utils/assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const footerLinks = [
@@ -77,12 +78,12 @@ const Footer = () => {
             <ul className="grid grid-cols-2 gap-x-4 gap-y-4">
               {footerLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.path}
+                  <Link
+                    to={link.path}
                     className="text-white/90 hover:text-white hover:pl-2 transition-all duration-300 font-medium text-sm inline-block"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
